@@ -11,8 +11,7 @@
     Header:
 
      - [x] Logo;
-     - [ ] Horário local do usuário;
-     - [ ] Background transparente;
+     - [x] Horário local do usuário;
 
     Body:
      - [ ] Campo para inserir tarefa;

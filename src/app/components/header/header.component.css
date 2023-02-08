@@ -1,5 +1,16 @@
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22px 22px 0 22px;
+}
+
 .title {
   font-family: 'Paytone One', sans-serif;
   font-size: 28px;
+}
 
+.hour {
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 28px
 }
