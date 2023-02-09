@@ -13,13 +13,15 @@ export class BodyComponent {
     let now  = Date.now()
     let date = new Date(now);
     let days = [
+      'Domingo',
       'Segunda-Feira',
       'Terça-Feira',
       'Quarta-Feira',
       'Quinta-Feira',
-      'Sexta-Feira'
+      'Sexta-Feira',
+      'Sábado'
     ];
-    
+
     let months = [
       'Janeiro',
       'Fevereiro',
@@ -34,6 +36,8 @@ export class BodyComponent {
       'Novembro',
       'Dezembro'
     ];
+
+    console.log(date.getDay())
 
     this.infoDate = `${days[date.getDay()]}, ${date.getDate()} de ${months[date.getMonth()]}`
   }
