@@ -17,7 +17,7 @@
      - [x] Data e dia da semana;
      - [x] Campo para inserir tarefa;
      - [x] Botão de Confirmar nova tarefa;
-     - [ ] Botão de Resetar Campo;
+     - [x] Botão de Resetar Campo;
      - [ ] Lista não ordenada para a exibição de tarefas;
      - [ ] Botão de conclusão na tarefa;
      - [ ] Botão de excluir tarefa;
