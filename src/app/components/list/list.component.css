@@ -1,0 +1,9 @@
+.container__list {
+  margin-top: 3rem;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

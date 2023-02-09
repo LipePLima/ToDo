@@ -18,9 +18,9 @@
      - [x] Campo para inserir tarefa;
      - [x] Botão de Confirmar nova tarefa;
      - [x] Botão de Resetar Campo;
-     - [ ] Lista não ordenada para a exibição de tarefas;
-     - [ ] Botão de conclusão na tarefa;
-     - [ ] Botão de excluir tarefa;
+     - [x] Lista não ordenada para a exibição de tarefas;
+     - [x] Botão de conclusão na tarefa;
+     - [x] Botão de excluir tarefa;
      - [ ] Opções de personalização de background;
 
 <!-- 
