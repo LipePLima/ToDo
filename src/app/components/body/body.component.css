@@ -1,0 +1,27 @@
+.date {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 15px;
+}
+
+.container__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.demo__checkBox {
+  width: 13px;
+  height: 13px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  margin-right: .5rem;
+}
+
+.input__task {
+  width: 180px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding-left: .5rem;
+}

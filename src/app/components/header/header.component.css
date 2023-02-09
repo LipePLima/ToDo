@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 22px 22px 0 22px;
+  margin-top: 22px;
 }
 
 .title {

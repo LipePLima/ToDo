@@ -14,7 +14,8 @@
      - [x] Horário local do usuário;
 
     Body:
-     - [ ] Campo para inserir tarefa;
+     - [x] Data e dia da semana;
+     - [x] Campo para inserir tarefa;
      - [ ] Botão de Confirmar nova tarefa;
      - [ ] Botão de Resetar Campo;
      - [ ] Lista não ordenada para a exibição de tarefas;
