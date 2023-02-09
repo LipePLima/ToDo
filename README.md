@@ -27,7 +27,7 @@
 
   - Header:
     
-    - [ ] Horário Local em funcionamento;
+    - [x] Horário Local em funcionamento;
     
   - Body: 
   
