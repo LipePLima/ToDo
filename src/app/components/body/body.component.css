@@ -39,3 +39,7 @@
   border: 1px solid #888888;
   border-radius: 2px;
 }
+
+.btn__input:active {
+  background-color: #686868;
+}
