@@ -1,6 +1,7 @@
 .date {
   font-family: 'Paytone One', sans-serif;
   font-size: 15px;
+  color: #F2F2F2;
 }
 
 .container__input {
@@ -13,7 +14,7 @@
 .demo__checkBox {
   width: 7%;
   height: 25px;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   border-radius: 50%;
   margin-right: .5rem;
 }
@@ -22,7 +23,7 @@
   font-size: 18px;
   width: 70%;
   height: 36px;
-  border: 1px solid #000;
+  border: 1px solid #F2F2F2;
   border-radius: 5px;
   padding-left: .4rem;
 }
@@ -36,7 +37,7 @@
   margin-left: .5rem;
   background-color: #c4c4c4;
   color: #fff;
-  border: 1px solid #888888;
+  border: 1px solid #F2F2F2;
   border-radius: 2px;
 }
 
