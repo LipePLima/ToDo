@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { ListComponent } from './components/list/list.component';
+import { CustomizeComponent } from './components/customize/customize.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ListComponent } from './components/list/list.component';
     HeaderComponent,
     BodyComponent,
     ListComponent,
+    CustomizeComponent,
   ],
   imports: [
     BrowserModule,

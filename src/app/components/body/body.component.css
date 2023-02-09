@@ -1,3 +1,7 @@
+main {
+  height: 93vh;
+}
+
 .date {
   font-family: 'Paytone One', sans-serif;
   font-size: 15px;
@@ -43,4 +47,9 @@
 
 .btn__input:active {
   background-color: #686868;
+}
+
+app-customize {
+  position: absolute;
+  top: 95%;
 }

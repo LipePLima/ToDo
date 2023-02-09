@@ -1,0 +1,9 @@
+.title__theme {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #000;
+  background-color: transparent;
+  border: none;
+}
