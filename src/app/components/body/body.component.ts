@@ -9,10 +9,10 @@ export class BodyComponent {
   public callDate = this.date();
   public infoDate: string | undefined;
 
-  private date () {
-    let now  = Date.now()
-    let date = new Date(now);
-    let days = [
+  private date (): void {
+    let now: number    = Date.now()
+    let date: Date     = new Date(now);
+    let days: string[] = [
       'Domingo',
       'Segunda-Feira',
       'Terça-Feira',
@@ -22,7 +22,7 @@ export class BodyComponent {
       'Sábado'
     ];
 
-    let months = [
+    let months: string[] = [
       'Janeiro',
       'Fevereiro',
       'Março',
@@ -37,8 +37,13 @@ export class BodyComponent {
       'Dezembro'
     ];
 
-    console.log(date.getDay())
-
     this.infoDate = `${days[date.getDay()]}, ${date.getDate()} de ${months[date.getMonth()]}`
+  }
+
+  public reset(): void {
+    let field: HTMLSelectElement = (<HTMLSelectElement>document.getElementById('input__task'));
+
+    field.value = '';
+    field.focus()
   }
 }

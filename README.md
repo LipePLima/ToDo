@@ -32,7 +32,7 @@
   - Body: 
   
     - [x] Data e dia atualizados;
+    - [x] Resetar Campo de input ao clicar no botão Reset;
     - [ ] Inserir Tarefa ao clicar no botão Confirmar;
-    - [ ] Resetar Campo de input ao clicar no botão Reset;
     
 
