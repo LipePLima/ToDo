@@ -36,7 +36,7 @@
     - [x] Data e dia atualizados;
     - [x] Resetar Campo de input ao clicar no botão Reset;
     - [x] Botão de conclusão de tarefa marcado ao clicar, e marcando tarefa;
-    - [ ] Exibir lista de tarefas concluídas ao clicar no botão Concluídas
+    - [x] Exibir lista de tarefas concluídas ao clicar no botão Concluídas;
     - [ ] Inserir Tarefa ao clicar no botão Confirmar;
     
 

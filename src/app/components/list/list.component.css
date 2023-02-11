@@ -92,6 +92,19 @@
 }
 
 .arrow__completed {
+  transition: .2s;
   font-size: 24px;
 }
 
+.arrow__completed-active {
+  transition: .2s;
+  transform: rotate(90deg);
+}
+
+.list__completed {
+  display: none;
+}
+
+.list__completed-active {
+  display: flex;
+}
