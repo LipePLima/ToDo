@@ -21,6 +21,7 @@
      - [x] Lista não ordenada para a exibição de tarefas;
      - [x] Botão de conclusão na tarefa;
      - [x] Botão de excluir tarefa;
+     - [ ] Lista de tarefas concluidas;
      - [ ] Opções de personalização de background;
 
 *Funcionalidades*
@@ -33,6 +34,7 @@
   
     - [x] Data e dia atualizados;
     - [x] Resetar Campo de input ao clicar no botão Reset;
+    - [x] Botão de conclusão de tarefa marcado ao clicar, e marcando tarefa;
     - [ ] Inserir Tarefa ao clicar no botão Confirmar;
     
 

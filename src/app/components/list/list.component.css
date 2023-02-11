@@ -54,7 +54,13 @@
 }
 
 .text-task {
+
   font-size: 18px;
+}
+
+.text-active {
+  color: #8b8b8b;
+  text-decoration: line-through;
 }
 
 .remove-task {

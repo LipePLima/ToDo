@@ -46,4 +46,23 @@ export class BodyComponent {
     field.value = '';
     field.focus()
   }
+
+  public addTask() {
+    let list: HTMLElement | null = document.getElementById('list__task')
+
+    list!.innerHTML += `
+      <li class="task">
+        <div class="info-task">
+          <button class="check-task ">
+            <span class="material-symbols-outlined check">done</span>
+          </button>
+          <p class="text-task">Fazer tarefas</p>
+        </div>
+        <button class="remove-task">
+          <span class="material-symbols-outlined remove">delete_forever</span>
+        </button>
+      </li>
+    `
+
+  }
 }
