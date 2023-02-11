@@ -2,7 +2,28 @@
   <ul class="list__task" id="list__task">
     <li class="task">
       <div class="info-task">
-        <button class="check-task" id="check-task" (click)="finishTask()">
+        <button class="check-task" (click)="finishTask()">
+          <span class="material-symbols-outlined check">done</span>
+        </button>
+        <p class="text-task">Fazer tarefas</p>
+      </div>
+      <button class="remove-task">
+        <span class="material-symbols-outlined remove">delete_forever</span>
+      </button>
+    </li>
+  </ul>
+
+  <button class="btn__completed">
+    <span class="material-symbols-outlined arrow__completed">
+      chevron_right
+    </span>
+    <p class="completed">Concluídas</p>
+  </button>
+
+  <ul class="list__task list__completed">
+    <li class="task">
+      <div class="info-task">
+        <button class="check-task" (click)="finishTask()">
           <span class="material-symbols-outlined check">done</span>
         </button>
         <p class="text-task" id="text-task">Fazer tarefas</p>

@@ -54,7 +54,6 @@
 }
 
 .text-task {
-
   font-size: 18px;
 }
 
@@ -77,3 +76,22 @@
 .remove {
   font-size: 28px;
 }
+
+.btn__completed {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 1rem 0 1rem .5rem;
+  padding: 0;
+}
+
+.arrow__completed {
+  font-size: 24px;
+}
+

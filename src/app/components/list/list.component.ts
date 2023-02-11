@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   public finishTask() {
-    const check = document.getElementById('check-task');
-    const task  = document.getElementById('text-task');
+    const check = document.querySelectorAll('.check-task');
+    const task  = document.querySelectorAll('.text-task');
 
-    check?.classList.toggle('check-active')
-    task?.classList.toggle('text-active')
+    // check?.classList.toggle('check-active')
+    // task?.classList.toggle('text-active')
   }
 }
