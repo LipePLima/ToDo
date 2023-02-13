@@ -10,7 +10,6 @@ export class BodyComponent {
     this.date();
   }
 
-  private field: HTMLSelectElement = (<HTMLSelectElement>document.getElementById('input__task'));
   public infoDate: string | undefined;
 
   private date (): void {
@@ -44,29 +43,32 @@ export class BodyComponent {
     this.infoDate = `${days[date.getDay()]}, ${date.getDate()} de ${months[date.getMonth()]}`
   }
 
-  public reset(): void {
-    this.field.value = '';
-    this.field.focus()
+  public reset(event: any): void {
+    document.getElementById('btn__refresh')?.addEventListener('click', () => {
+      event.value = '';
+      event.focus();
+
+    })
   }
 
-  public addTask() {
-    let list: HTMLElement | null = document.getElementById('list__task')
+  // public addTask() {
+  //   let list: HTMLElement | null = document.getElementById('list__task')
 
-    list!.innerHTML += `
-    <li class="task">
-      <div class="info-task">
-        <button class="check-task" (click)="finishTask()">
-          <span class="material-symbols-outlined check">done</span>
-        </button>
-        <p class="text-task"></p>
-      </div>
-      <button class="remove-task">
-        <span class="material-symbols-outlined remove">delete_forever</span>
-      </button>
-    </li>
-    `
+  //   list!.innerHTML += `
+  //   <li class="task">
+  //     <div class="info-task">
+  //       <button class="check-task" (click)="finishTask()">
+  //         <span class="material-symbols-outlined check">done</span>
+  //       </button>
+  //       <p class="text-task"></p>
+  //     </div>
+  //     <button class="remove-task">
+  //       <span class="material-symbols-outlined remove">delete_forever</span>
+  //     </button>
+  //   </li>
+  //   `
 
-    const text: Element | null = document.querySelector('.text-task');
-    text!.textContent = this.field.value
-  }
+  //   const text: Element | null = document.querySelector('.text-task');
+  //   text!.textContent = this.field.value
+  // }
 }

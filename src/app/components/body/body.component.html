@@ -2,11 +2,11 @@
   <p class="date">{{ infoDate }}</p>
   <section class="container__input">
     <div class="demo__checkBox"></div>
-    <input type="text" maxlength="33" id="input__task" class="input__task">
-    <button class="btn__input btn__confirm" id="btn__input" (click)="addTask()">
+    <input type="text" maxlength="33" id="input__task" class="input__task" (click)="reset($event.target)">
+    <button class="btn__input btn__confirm" id="btn__input">
       <span class="material-symbols-outlined">done</span>
     </button>
-    <button class="btn__input btn__refresh" (click)="reset()">
+    <button class="btn__input btn__refresh" id="btn__refresh">
       <span class="material-symbols-outlined">refresh</span>
     </button>
   </section>
