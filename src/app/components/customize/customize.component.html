@@ -1,4 +1,34 @@
-<button class="title__theme">
-  <p>Temas</p>
-  <span class="material-symbols-outlined">arrow_drop_down</span>
-</button>
+<section class="container__theme" id="container__theme">
+  <button class="title__theme" (click)="displayTheme()">
+    <p>Temas</p>
+    <span class="material-symbols-outlined arrow__theme" id="arrow__theme">arrow_drop_down</span>
+  </button>
+  <section class="themes" id="themes">
+    <p class="text__themes">Selecionar tema</p>
+    <ul class="list__themes">
+      <li class="type__theme">
+        <button class="btn__theme">Cor</button>
+      </li>
+      <li class="type__theme">
+        <button class="btn__theme">Foto</button>
+      </li>
+    </ul>
+    <ul class="options__theme">
+      <li class="option__theme">
+        <button class="btn__option"></button>
+      </li>
+      <li class="option__theme">
+        <button class="btn__option"></button>
+      </li>
+      <li class="option__theme">
+        <button class="btn__option"></button>
+      </li>
+      <li class="option__theme">
+        <button class="btn__option"></button>
+      </li>
+      <li class="option__theme">
+        <button class="btn__option"></button>
+      </li>
+    </ul>
+  </section>
+</section>

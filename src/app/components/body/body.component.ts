@@ -52,23 +52,20 @@ export class BodyComponent {
   }
 
   // public addTask() {
-  //   let list: HTMLElement | null = document.getElementById('list__task')
+  //   let list: HTMLElement | null = document.getElementById('list__task');
 
-  //   list!.innerHTML += `
-  //   <li class="task">
-  //     <div class="info-task">
-  //       <button class="check-task" (click)="finishTask()">
-  //         <span class="material-symbols-outlined check">done</span>
-  //       </button>
-  //       <p class="text-task"></p>
-  //     </div>
-  //     <button class="remove-task">
-  //       <span class="material-symbols-outlined remove">delete_forever</span>
+  //   const row = `<li class="task">
+  //   <div class="info-task">
+  //     <button class="check-task" (click)="finishTask()">
+  //       <span class="material-symbols-outlined check">done</span>
   //     </button>
-  //   </li>
-  //   `
+  //     <p class="text-task"></p>
+  //   </div>
+  //   <button class="remove-task">
+  //     <span class="material-symbols-outlined remove">delete_forever</span>
+  //   </button>
+  // </li>`
 
-  //   const text: Element | null = document.querySelector('.text-task');
-  //   text!.textContent = this.field.value
+  //   list!.innerHTML += row
   // }
 }

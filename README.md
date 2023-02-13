@@ -23,7 +23,7 @@
      - [x] Botão de excluir tarefa;
      - [x] Botão de exibição de lista de tarefas concluídas;
      - [x] Lista de tarefas concluidas;
-     - [ ] Opções de personalização de background;
+     - [x] Opções de personalização de background;
 
 *Funcionalidades*
 

@@ -48,8 +48,3 @@ main {
 .btn__input:active {
   background-color: #686868;
 }
-
-app-customize {
-  position: absolute;
-  top: 95%;
-}
