@@ -2,7 +2,7 @@
   <ul class="list__task" id="list__task">
     <li class="task">
       <div class="info-task">
-        <button class="check-task" (click)="finishTask()">
+        <button class="check-task" id="check-task" (click)="finishTask($event)">
           <span class="material-symbols-outlined check">done</span>
         </button>
         <p class="text-task">Tarefa Teste0</p>
@@ -14,7 +14,7 @@
 
     <li class="task">
       <div class="info-task">
-        <button class="check-task" (click)="finishTask()">
+        <button class="check-task" id="check-task" (click)="finishTask($event)">
           <span class="material-symbols-outlined check">done</span>
         </button>
         <p class="text-task">Tarefa Teste1</p>
@@ -26,7 +26,7 @@
 
     <li class="task">
       <div class="info-task">
-        <button class="check-task" (click)="finishTask()">
+        <button class="check-task" id="check-task" (click)="finishTask($event)">
           <span class="material-symbols-outlined check">done</span>
         </button>
         <p class="text-task">Tarefa Teste2</p>
@@ -35,7 +35,6 @@
         <span class="material-symbols-outlined remove">delete_forever</span>
       </button>
     </li>
-
 
   </ul>
 

@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLinkWithHref } from '@angular/router';
-import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-list',
@@ -9,45 +7,36 @@ import { elementAt } from 'rxjs';
 })
 export class ListComponent {
 
-  private listCheck:     any
-  private listTask:      any
-
-  public finishTask() {
+  public finishTask(event: any) {
     const listToDo      = document.querySelector('.list__task')
-    const check         = document.querySelectorAll('.check-task');
-    const task          = document.querySelectorAll('.text-task');
     const listCompleted = document.getElementById('list__completed');
     const btn           = document.getElementById('btn__completed');
+    const check         = event.target.parentNode;
+    const task          = check.parentNode.querySelector('.text-task');
 
-    console.log(listToDo)
-    for (let i = 0; i < check.length; i++) {
-      check[i]?.classList.toggle('check-active')
-      task[i]?.classList.toggle('text-active')
-    }
+    check?.classList.toggle('check-active');
+    task?.classList.toggle('text-active')
 
     btn!.classList.add('btn__completed-active');
 
-    this.listCheck = check;
-    this.listTask  = task
 
-    this.listCheck.forEach( (el: any) => {
-      let row = el.parentNode.parentNode;
-      if (el.classList.contains('check-active')) {
-        listCompleted!.appendChild(row)
+    let row = check.parentNode.parentNode;
+    if (check.classList.contains('check-active')) {
+      listCompleted!.appendChild(row)
 
-      } else {
-        listToDo!.appendChild(row)
-        
-      }
-    })
+    } else {
+      listToDo!.appendChild(row)
+
+    }
+
 
   }
 
   public viewCompleteds() {
-    const arrow = document.getElementById('arrow__completed');
-    arrow!.classList.toggle('arrow__completed-active');
+    const arrow:         HTMLElement | null = document.getElementById('arrow__completed');
+    const listCompleted: HTMLElement | null = document.getElementById('list__completed');
 
-    const listCompleted = document.getElementById('list__completed');
+    arrow!.classList.toggle('arrow__completed-active');
     listCompleted!.classList.toggle('list__completed-active');
 
   }
