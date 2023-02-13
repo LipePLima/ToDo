@@ -1,51 +1,50 @@
 <section class="container__list">
   <ul class="list__task" id="list__task">
-    <li class="task" id="0">
+    <li class="task">
       <div class="info-task">
-        <button class="check-task" (click)="finishTask(this)">
+        <button class="check-task" (click)="finishTask()">
           <span class="material-symbols-outlined check">done</span>
         </button>
-        <p class="text-task">Fazer tarefas</p>
+        <p class="text-task">Tarefa Teste0</p>
       </div>
       <button class="remove-task">
         <span class="material-symbols-outlined remove">delete_forever</span>
       </button>
     </li>
 
-    <li class="task" id="1">
+    <li class="task">
       <div class="info-task">
-        <button class="check-task" (click)="finishTask(this)">
+        <button class="check-task" (click)="finishTask()">
           <span class="material-symbols-outlined check">done</span>
         </button>
-        <p class="text-task">Fazer tarefas</p>
+        <p class="text-task">Tarefa Teste1</p>
       </div>
       <button class="remove-task">
         <span class="material-symbols-outlined remove">delete_forever</span>
       </button>
     </li>
 
-    <li class="task" id="2">
+    <li class="task">
       <div class="info-task">
-        <button class="check-task" (click)="finishTask(this)">
+        <button class="check-task" (click)="finishTask()">
           <span class="material-symbols-outlined check">done</span>
         </button>
-        <p class="text-task">Fazer tarefas</p>
+        <p class="text-task">Tarefa Teste2</p>
       </div>
       <button class="remove-task">
         <span class="material-symbols-outlined remove">delete_forever</span>
       </button>
     </li>
+
 
   </ul>
 
-  <button class="btn__completed" (click)="viewCompleteds()">
+  <button class="btn__completed" id="btn__completed" (click)="viewCompleteds()">
     <span class="material-symbols-outlined arrow__completed" id="arrow__completed">
       chevron_right
     </span>
     <p class="completed">Concluídas</p>
   </button>
 
-  <ul class="list__task list__completed" id="list__completed">
-    
-  </ul>
+  <ul class="list__task list__completed" id="list__completed"></ul>
 </section>

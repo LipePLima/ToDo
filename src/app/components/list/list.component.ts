@@ -7,20 +7,34 @@ import { elementAt } from 'rxjs';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-  public finishTask(btn: any) {
-    console.log(btn)
-    const check = document.querySelectorAll('.check-task');
-    const task  = document.querySelectorAll('.text-task');
 
-    // check.forEach(element => {
-    //   element.addEventListener("click", event => {
-    //     console.log(event.target)
-    //     event.stopPropagation
-    //     // check[i]?.classList.toggle('check-active')
-    //   })
-    // })
+  private listCheck:     any
+  private listTask:      any
 
-    // task?.classList.toggle('text-active')
+  public finishTask() {
+    const check         = document.querySelectorAll('.check-task');
+    const task          = document.querySelectorAll('.text-task');
+    const listCompleted = document.getElementById('list__completed');
+    const btn           = document.getElementById('btn__completed');
+
+    for (let i = 0; i < check.length; i++) {
+      check[i]?.classList.toggle('check-active')
+      task[i]?.classList.toggle('text-active')
+    }
+
+    btn!.classList.add('btn__completed-active');
+
+    this.listCheck = check;
+    this.listTask  = task
+
+    this.listCheck.forEach( (el: any) => {
+      if (el.classList.contains('check-active')) {
+        let row = el.parentNode.parentNode;
+
+        listCompleted!.appendChild(row)
+      }
+    })
+
   }
 
   public viewCompleteds() {
@@ -29,5 +43,7 @@ export class ListComponent {
 
     const listCompleted = document.getElementById('list__completed');
     listCompleted!.classList.toggle('list__completed-active');
+
   }
+
 }

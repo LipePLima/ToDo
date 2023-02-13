@@ -79,7 +79,7 @@
 
 .btn__completed {
   font-family: 'Roboto', sans-serif;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   background-color: transparent;
@@ -91,20 +91,21 @@
   padding: 0;
 }
 
+.btn__completed-active {
+  display: flex;
+}
+
 .arrow__completed {
   transition: .2s;
   font-size: 24px;
+  transform: rotate(90deg);
 }
 
 .arrow__completed-active {
   transition: .2s;
-  transform: rotate(90deg);
-}
-
-.list__completed {
-  display: none;
+  transform: rotate(0deg);
 }
 
 .list__completed-active {
-  display: flex;
+  display: none;
 }

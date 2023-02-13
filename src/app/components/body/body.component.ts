@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent {
-  public callDate = this.date();
+  constructor () {
+    this.date();
+  }
+
+  private field: HTMLSelectElement = (<HTMLSelectElement>document.getElementById('input__task'));
   public infoDate: string | undefined;
 
   private date (): void {
@@ -41,28 +45,28 @@ export class BodyComponent {
   }
 
   public reset(): void {
-    let field: HTMLSelectElement = (<HTMLSelectElement>document.getElementById('input__task'));
-
-    field.value = '';
-    field.focus()
+    this.field.value = '';
+    this.field.focus()
   }
 
   public addTask() {
     let list: HTMLElement | null = document.getElementById('list__task')
 
     list!.innerHTML += `
-      <li class="task">
-        <div class="info-task">
-          <button class="check-task ">
-            <span class="material-symbols-outlined check">done</span>
-          </button>
-          <p class="text-task">Fazer tarefas</p>
-        </div>
-        <button class="remove-task">
-          <span class="material-symbols-outlined remove">delete_forever</span>
+    <li class="task">
+      <div class="info-task">
+        <button class="check-task" (click)="finishTask()">
+          <span class="material-symbols-outlined check">done</span>
         </button>
-      </li>
+        <p class="text-task"></p>
+      </div>
+      <button class="remove-task">
+        <span class="material-symbols-outlined remove">delete_forever</span>
+      </button>
+    </li>
     `
 
+    const text: Element | null = document.querySelector('.text-task');
+    text!.textContent = this.field.value
   }
 }
