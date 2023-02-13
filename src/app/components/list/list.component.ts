@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLinkWithHref } from '@angular/router';
 import { elementAt } from 'rxjs';
 
 @Component({
@@ -12,11 +13,13 @@ export class ListComponent {
   private listTask:      any
 
   public finishTask() {
+    const listToDo      = document.querySelector('.list__task')
     const check         = document.querySelectorAll('.check-task');
     const task          = document.querySelectorAll('.text-task');
     const listCompleted = document.getElementById('list__completed');
     const btn           = document.getElementById('btn__completed');
 
+    console.log(listToDo)
     for (let i = 0; i < check.length; i++) {
       check[i]?.classList.toggle('check-active')
       task[i]?.classList.toggle('text-active')
@@ -28,10 +31,13 @@ export class ListComponent {
     this.listTask  = task
 
     this.listCheck.forEach( (el: any) => {
+      let row = el.parentNode.parentNode;
       if (el.classList.contains('check-active')) {
-        let row = el.parentNode.parentNode;
-
         listCompleted!.appendChild(row)
+
+      } else {
+        listToDo!.appendChild(row)
+        
       }
     })
 
