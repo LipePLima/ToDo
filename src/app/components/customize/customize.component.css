@@ -20,9 +20,9 @@
 .title__theme {
   display: flex;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body);
   font-size: 18px;
-  color: #fff;
+  color: var(--white);
   background-color: transparent;
   border: none;
 }
@@ -43,7 +43,7 @@
   left: -22px;
   width: 92vw;
   height: 120px;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 18px 18px 0 0;
   padding: 1rem 1rem;
 }
@@ -53,7 +53,7 @@
 }
 
 .text__themes {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 1rem;

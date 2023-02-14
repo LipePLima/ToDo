@@ -19,8 +19,8 @@
   margin-bottom: .5rem;
   padding: 0 .5rem;
   border-radius: 8px;
-  background-color: #fff;
-  font-family: 'Roboto', sans-serif;
+  background-color: var(--white);
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 500;
 }
@@ -39,14 +39,14 @@
   width: 24px;
   height: 24px;
   margin-right: .5rem;
-  background-color: #fff;
-  border: 1px solid #000;
+  background-color: var(--white);
+  border: var(--border-black);
   border-radius: 50%;
 }
 
 .check {
   font-size: 22px;
-  color: #fff;
+  color: var(--white);
 }
 
 .check-active {
@@ -78,13 +78,13 @@
 }
 
 .btn__completed {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body);
   display: none;
   flex-direction: row;
   align-items: center;
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: var(--white);
   font-size: 18px;
   font-weight: 500;
   margin: 1rem 0 1rem .5rem;

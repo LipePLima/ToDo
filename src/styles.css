@@ -47,3 +47,18 @@ table {
 body {
   background-color: #6078BF;
 }
+
+:root {
+  /* FONTES */
+  --font-title: 'Paytone One', sans-serif;
+  --font-date: 'Allerta Stencil', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  /* BORDAS */
+  --border-black: 1px solid #000;
+  --border-white: 1px solid #F2F2F2;
+
+  /* CORES */
+  --white: #fff;
+  --white1: #f2f2f2;
+}

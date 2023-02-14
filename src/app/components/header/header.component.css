@@ -3,15 +3,15 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 22px;
-  color: #F2F2F2;
+  color: var(--white1);
 }
 
 .title {
-  font-family: 'Paytone One', sans-serif;
+  font-family: var(--font-title);
   font-size: 28px;
 }
 
 .hour {
-  font-family: 'Allerta Stencil', sans-serif;
+  font-family: var(--font-date);
   font-size: 28px
 }
