@@ -1,6 +1,30 @@
 {
   "colors": [
     {
+      "color": "#6078BF"
+    },
+    {
+      "color": "#9E5D9F"
+    },
+    {
+      "color": "#C05171"
+    },
+    {
+      "color": "#27837E"
+    },
+    {
+      "color": "#2E845F"
+    },
+    {
+      "color": "#C1504C"
+    },
+    {
+      "color": "#E1EFFA",
+      "colorText": "#2D64A7"
+    }
+  ],
+  "images": [
+    {
       
     }
   ]

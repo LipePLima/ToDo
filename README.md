@@ -43,6 +43,8 @@
     - [x] Transferir tarefa para a lista de tarefas concluídas ao clicar no botão de conclusão de tarefas;
     - [x] Exibir lista de tarefas concluídas ao clicar no botão Concluídas;
     - [x] Marcar somente o botão clicado como concluído;
+    - [x] Configurar API Interna;
+    - [ ] Preparar ambiente com service;
     - [ ] Trocar o plano de fundo da aplicação com as opções de troca de cor;
     - [ ] Inserir Tarefa ao clicar no botão Confirmar;
     
