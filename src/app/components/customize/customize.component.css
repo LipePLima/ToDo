@@ -2,7 +2,7 @@
   0% {
     top: 95%;
   } 100% {
-    top: calc(95% - 146px);
+    top: calc(95% - 136px);
   }
 }
 
@@ -13,7 +13,7 @@
 }
 
 .container__theme-active {
-  top: 74%;
+  top: calc(95% - 130px);
   animation: top .5s linear;
 }
 
