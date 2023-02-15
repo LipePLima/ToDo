@@ -15,25 +15,7 @@
     </ul>
 
     <ul class="options__theme">
-      <li class="option__theme">
-        <button class="btn__option"></button>
-      </li>
-      <li class="option__theme">
-        <button class="btn__option"></button>
-      </li>
-      <li class="option__theme">
-        <button class="btn__option"></button>
-      </li>
-      <li class="option__theme">
-        <button class="btn__option"></button>
-      </li>
-      <li class="option__theme">
-        <button class="btn__option"></button>
-      </li>
-      <li class="option__theme">
-        <button class="btn__option"></button>
-      </li>
-      <li class="option__theme">
+      <li class="option__theme" *ngFor="let color of colors">
         <button class="btn__option"></button>
       </li>
     </ul>

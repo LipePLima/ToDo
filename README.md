@@ -45,7 +45,9 @@
     - [x] Marcar somente o botão clicado como concluído;
     - [x] Configurar API Interna;
     - [x] Preparar ambiente com service;
+    - [ ] Alterar as opções de Cor e Imagens da opção Temas;
     - [ ] Trocar o plano de fundo da aplicação com as opções de troca de cor;
+    - [ ] Trocar o plano de fundo da aplicação com as opções de troca de imagem;
     - [ ] Inserir Tarefa ao clicar no botão Confirmar;
     
 

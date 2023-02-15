@@ -2,31 +2,38 @@
   "colors": [
     {
       "color": "#6078BF",
-      "colorText": "#6078BF"
+      "colorText": "#fff",
+      "border": "#6078BF"
     },
     {
       "color": "#9E5D9F",
-      "colorText": "#9E5D9F"
+      "colorText": "#fff",
+      "border": "#9E5D9F"
     },
     {
       "color": "#C05171",
-      "colorText": "#C05171"
+      "colorText": "#fff",
+      "border": "#C05171"
     },
     {
       "color": "#27837E",
-      "colorText": "#27837E"
+      "colorText": "#fff",
+      "border": "#27837E"
     },
     {
       "color": "#2E845F",
-      "colorText": "#2E845F"
+      "colorText": "#fff",
+      "border": "#2E845F"
     },
     {
       "color": "#C1504C",
-      "colorText": "#C1504C"
+      "colorText": "#fff",
+      "border": "#C1504C"
     },
     {
       "color": "#E1EFFA",
-      "colorText": "#2D64A7"
+      "colorText": "#2D64A7",
+      "border": "#2D64A7"
     }
   ],
   "images": [

@@ -7,6 +7,7 @@ import { ApiColors, ApiImages } from '../../services/api';
   templateUrl: './customize.component.html',
   styleUrls: ['./customize.component.css']
 })
+
 export class CustomizeComponent implements OnInit {
 
   constructor(private service: ApiService) { }
@@ -15,15 +16,17 @@ export class CustomizeComponent implements OnInit {
   private images: ApiImages[] = [];
 
   ngOnInit(): void {
-      this.service.color().subscribe( color => {
-        this.colors = color
-      });
-      this.service.images().subscribe( image => {
-        this.images = image
-      });
+    this.service.color().subscribe((colors: ApiColors[]) => {
+      this.colors = colors;
+    });
+    this.service.images().subscribe((images: ApiImages[]) => {
+      this.images = images;
+    });
   }
 
   public displayTheme() {
+    const body     = document.body;
+    const header   = (<HTMLElement>document.querySelector('.container__header'));
     const section  = document.getElementById('container__theme');
     const arrow    = document.getElementById('arrow__theme');
     const secTheme = document.getElementById('themes');
@@ -34,10 +37,29 @@ export class CustomizeComponent implements OnInit {
     secTheme!.classList.toggle('themes-active');
 
     for(let i = 0; i < btnTheme.length; i++) {
-      let newBtn = btnTheme[i] as HTMLElement;
+      const newBtn = btnTheme[i] as HTMLElement;
+      const { color, colorText, border } = this.colors[i];
 
-      newBtn.style.backgroundColor = this.colors[i].color;
-      newBtn.style.border = `1px solid ${this.colors[i].colorText}`
+      Object.assign(newBtn.style, {
+        backgroundColor: color,
+        border: `1px solid ${border}`
+      });
+
+      newBtn.addEventListener('click', () => {
+        Object.assign(body.style, {
+          backgroundColor: color,
+          color: border
+        })
+
+        Object.assign(header.style, {
+          color: colorText
+        })
+
+
+
+
+
+      });
     }
   }
 }
