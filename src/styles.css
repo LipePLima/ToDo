@@ -50,9 +50,8 @@ body {
 
 :root {
   /* FONTES */
-  --font-title: 'Paytone One', sans-serif;
-  --font-date: 'Allerta Stencil', sans-serif;
   --font-body: 'Roboto', sans-serif;
+  --font-date: 'Allerta Stencil', sans-serif;
 
   /* BORDAS */
   --border-black: 1px solid #000;

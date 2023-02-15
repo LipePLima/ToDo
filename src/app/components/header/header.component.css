@@ -7,8 +7,9 @@
 }
 
 .title {
-  font-family: var(--font-title);
+  font-family: var(--font-body);
   font-size: 28px;
+  font-weight: bold;
 }
 
 .hour {

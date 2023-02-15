@@ -3,8 +3,9 @@ main {
 }
 
 .date {
-  font-family: var(--font-title);
+  font-family: var(--font-date);
   font-size: 15px;
+  font-weight: 500;
   color: var(--white1);
 }
 
