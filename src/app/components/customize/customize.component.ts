@@ -25,40 +25,66 @@ export class CustomizeComponent implements OnInit {
   }
 
   public displayTheme() {
-    const body     = document.body;
-    const header   = (<HTMLElement>document.querySelector('.container__header'));
-    const section  = document.getElementById('container__theme');
-    const arrow    = document.getElementById('arrow__theme');
-    const secTheme = document.getElementById('themes');
-    const btnTheme = document.querySelectorAll('.btn__option');
+    const section      = document.getElementById('container__theme') as HTMLElement;
+    const arrow        = document.getElementById('arrow__theme') as HTMLElement;
+    const secTheme     = document.getElementById('themes') as HTMLElement;
 
     section!.classList.toggle('container__theme-active');
     arrow!.classList.toggle('arrow__theme-active');
     secTheme!.classList.toggle('themes-active');
 
+    this.changeColors();
+  }
+
+  private changeColors () {
+    const body         = document.body;
+    const header       = document.querySelector('.container__header') as HTMLElement;
+    const dateBody     = document.getElementById('dateBody') as HTMLElement;
+    const falseCheck   = document.getElementById('demo__checkBox') as HTMLElement;
+    const arrowDone    = document.getElementById('arrowDone') as HTMLElement;
+    const arrowRefresh = document.getElementById('arrowRefresh') as HTMLElement;
+    const btnCompleted = document.getElementById('btn__completed') as HTMLElement;
+    const textTheme    = document.getElementById('title__theme') as HTMLElement;
+    const btnCheck     = document.querySelectorAll('.check-task');
+    const btnTheme     = document.querySelectorAll('.btn__option');
+
+    const updateColorsText = (colorText: string) => {
+      const styleProps = {
+        color: colorText,
+      };
+
+      const elements = [header, dateBody, arrowDone, arrowRefresh, btnCompleted, textTheme];
+
+      for (const element of elements) {
+        Object.assign(element.style, styleProps);
+      }
+    }
+
     for(let i = 0; i < btnTheme.length; i++) {
-      const newBtn = btnTheme[i] as HTMLElement;
-      const { color, colorText, border } = this.colors[i];
+      const newBtn      = btnTheme[i] as HTMLElement;
+      const { color, colorText, borderForOpt } = this.colors[i];
 
       Object.assign(newBtn.style, {
         backgroundColor: color,
-        border: `1px solid ${border}`
+        border: `1px solid ${borderForOpt}`
       });
 
       newBtn.addEventListener('click', () => {
         Object.assign(body.style, {
           backgroundColor: color,
-          color: border
-        })
+          color: borderForOpt
+        });
 
-        Object.assign(header.style, {
-          color: colorText
-        })
+        updateColorsText(colorText);
+        falseCheck!.style.border  = `1px solid ${colorText}`;
 
+        // btnCheck.forEach( btn => {
+        //   const newBtnCheck = btn as HTMLElement
 
-
-
-
+        //   if (newBtnCheck.classList.contains('check-active')) {
+        //     newBtnCheck!.style.backgroundColor = borderForOpt;
+        //   }
+        // })
       });
     }
   }

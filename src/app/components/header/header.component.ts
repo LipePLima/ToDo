@@ -10,22 +10,17 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.time();
   }
-  
+
   public Hours: string | undefined;
 
   private time (): void {
     setInterval(() => {
       let date    = new Date();
-      let hours   = date.getHours();
-      let minutes = date.getMinutes();
+      let hours   = date.getHours().toString().padStart(2, '0');
+      let minutes = date.getMinutes().toString().padStart(2, '0');
 
-      if (minutes < 10) {
-        let newMinutes = '0' + minutes
-        this.Hours = `${hours}:${newMinutes}`
-      } else {
-        this.Hours = `${hours}:${minutes}`
-      }
-    }, 1000)
+      this.Hours = `${hours}:${minutes}`;
+    }, 1000);
   }
 
 }

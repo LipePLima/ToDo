@@ -14,7 +14,7 @@
 
     <li class="task">
       <div class="info-task">
-        <button class="check-task" id="check-task" (click)="finishTask($event)">
+        <button class="check-task" (click)="finishTask($event)">
           <span class="material-symbols-outlined check">done</span>
         </button>
         <p class="text-task">Tarefa Teste1</p>
@@ -42,7 +42,7 @@
     <span class="material-symbols-outlined arrow__completed" id="arrow__completed">
       chevron_right
     </span>
-    <p class="completed">Concluídas</p>
+    <p class="completed" id="completed">Concluídas</p>
   </button>
 
   <ul class="list__task list__completed" id="list__completed"></ul>

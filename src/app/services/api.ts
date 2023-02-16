@@ -1,7 +1,7 @@
 export interface ApiColors {
   color: string
   colorText: string
-  border: string
+  borderForOpt: string
 }
 
 export interface ApiImages {
