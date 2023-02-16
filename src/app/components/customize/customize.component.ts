@@ -1,6 +1,7 @@
 import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { ApiColors, ApiImages } from '../../services/api';
+import { observable } from 'rxjs';
 
 @Component({
   selector: 'app-customize',
@@ -14,6 +15,7 @@ export class CustomizeComponent implements OnInit {
 
   public colors: ApiColors[] = [];
   private images: ApiImages[] = [];
+  private btns!: NodeListOf<Element>;
 
   ngOnInit(): void {
     this.service.color().subscribe((colors: ApiColors[]) => {
@@ -28,16 +30,41 @@ export class CustomizeComponent implements OnInit {
     const section      = document.getElementById('container__theme') as HTMLElement;
     const arrow        = document.getElementById('arrow__theme') as HTMLElement;
     const secTheme     = document.getElementById('themes') as HTMLElement;
+    const btnOption    = document.querySelectorAll('.btn__theme');
+
+    this.btns = btnOption;
 
     section!.classList.toggle('container__theme-active');
-    arrow!.classList.toggle('arrow__theme-active');
+    arrow.classList.toggle('arrow__theme-active');
     secTheme!.classList.toggle('themes-active');
 
-    this.changeColors();
+    btnOption[0].classList.add('btn__theme-selected');
+    this.changeColors(btnOption[0] as HTMLElement);
   }
 
-  private changeColors () {
-    const body         = document.body;
+  public changeOptions (event: any) {
+    const btnOption = event.currentTarget as HTMLElement;
+
+    if (!btnOption.classList.contains('btn__theme-selected')) {
+      this.btns.forEach(btn => {
+        btn.classList.remove('btn__theme-selected');
+      });
+
+      btnOption.classList.add('btn__theme-selected');
+
+      this.changeColors(btnOption);
+    }
+
+    if (btnOption == this.btns[0]) {
+      console.log('Cores');
+    } else {
+      console.log('Imagens');
+    }
+
+  }
+
+  private changeColors (btn: any) {
+    const body         = document.body as HTMLElement;
     const header       = document.querySelector('.container__header') as HTMLElement;
     const dateBody     = document.getElementById('dateBody') as HTMLElement;
     const falseCheck   = document.getElementById('demo__checkBox') as HTMLElement;
@@ -61,7 +88,7 @@ export class CustomizeComponent implements OnInit {
     }
 
     for(let i = 0; i < btnTheme.length; i++) {
-      const newBtn      = btnTheme[i] as HTMLElement;
+      const newBtn = btnTheme[i] as HTMLElement;
       const { color, colorText, borderForOpt } = this.colors[i];
 
       Object.assign(newBtn.style, {
@@ -75,16 +102,19 @@ export class CustomizeComponent implements OnInit {
           color: borderForOpt
         });
 
+        const styleProps = {
+          '--backColor-active': color,
+          '--borderBtn': `2px solid ${borderForOpt}`,
+          '--colorBtn': colorText,
+        };
+
+        for (const [prop, value] of Object.entries(styleProps)) {
+          btn.style.setProperty(prop, value);
+        }
+
         updateColorsText(colorText);
-        falseCheck!.style.border  = `1px solid ${colorText}`;
+        falseCheck.style.border  = `1px solid ${colorText}`;
 
-        // btnCheck.forEach( btn => {
-        //   const newBtnCheck = btn as HTMLElement
-
-        //   if (newBtnCheck.classList.contains('check-active')) {
-        //     newBtnCheck!.style.backgroundColor = borderForOpt;
-        //   }
-        // })
       });
     }
   }
