@@ -27,10 +27,10 @@ export class CustomizeComponent implements OnInit {
   }
 
   public displayTheme() {
-    const section      = document.getElementById('container__theme') as HTMLElement;
-    const arrow        = document.getElementById('arrow__theme') as HTMLElement;
-    const secTheme     = document.getElementById('themes') as HTMLElement;
-    const btnOption    = document.querySelectorAll('.btn__theme');
+    const section   = document.getElementById('container__theme') as HTMLElement;
+    const arrow     = document.getElementById('arrow__theme') as HTMLElement;
+    const secTheme  = document.getElementById('themes') as HTMLElement;
+    const btnOption = document.querySelectorAll('.btn__theme') as NodeListOf<Element>;
 
     this.btns = btnOption;
 
@@ -39,7 +39,9 @@ export class CustomizeComponent implements OnInit {
     secTheme!.classList.toggle('themes-active');
 
     btnOption[0].classList.add('btn__theme-selected');
-    this.changeColors(btnOption[0] as HTMLElement);
+    for (let i = 0; i < btnOption.length; i++) {
+      this.changeColors(btnOption[i] as HTMLElement);
+    }
   }
 
   public changeOptions (event: any) {
@@ -48,11 +50,10 @@ export class CustomizeComponent implements OnInit {
     if (!btnOption.classList.contains('btn__theme-selected')) {
       this.btns.forEach(btn => {
         btn.classList.remove('btn__theme-selected');
+        this.changeColors(btn);
       });
 
       btnOption.classList.add('btn__theme-selected');
-
-      this.changeColors(btnOption);
     }
 
     if (btnOption == this.btns[0]) {
@@ -114,7 +115,6 @@ export class CustomizeComponent implements OnInit {
 
         updateColorsText(colorText);
         falseCheck.style.border  = `1px solid ${colorText}`;
-
       });
     }
   }

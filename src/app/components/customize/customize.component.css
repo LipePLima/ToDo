@@ -66,10 +66,10 @@
 .btn__theme {
   height: 30px;
   border-radius: 15px;
-  border: 2px solid #6078BF;
+  border: var(--borderBtn);
   font-size: 16px;
   text-align: center;
-  color: #6078BF;
+  color: var(--backColor-active);
   background-color: transparent;
   padding: .2rem .6rem;
   margin-right: .5rem;
