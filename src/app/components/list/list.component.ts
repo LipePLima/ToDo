@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-
   public finishTask(event: any) {
     const listToDo      = document.querySelector('.list__task')
     const listCompleted = document.getElementById('list__completed');
@@ -19,7 +18,6 @@ export class ListComponent {
 
     btn!.classList.add('btn__completed-active');
 
-
     let row = check.parentNode.parentNode;
     if (check.classList.contains('check-active')) {
       listCompleted!.appendChild(row)
@@ -29,6 +27,10 @@ export class ListComponent {
 
     }
 
+    if (listCompleted?.childElementCount == 0) {
+      btn!.classList.remove('btn__completed-active');
+
+    }
 
   }
 
@@ -40,5 +42,4 @@ export class ListComponent {
     listCompleted!.classList.toggle('list__completed-active');
 
   }
-
 }
