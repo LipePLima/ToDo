@@ -1,5 +1,5 @@
 <main class="compBody" >
-  <p class="date" id="dateBody">{{ infoDate }}</p>
+  <p class="date" id="dateBody">{{ date() | dateFormat }}</p>
   <section class="container__input">
     <div class="demo__checkBox" id="demo__checkBox"></div>
     <input type="text" maxlength="33" id="input__task" class="input__task" (click)="reset($event.target)">

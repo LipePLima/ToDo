@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { DateFormatPipe } from './components/body/date-format.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { CustomizeComponent } from './components/customize/customize.component';
     BodyComponent,
     ListComponent,
     CustomizeComponent,
+    DateFormatPipe
   ],
   imports: [
     BrowserModule,
