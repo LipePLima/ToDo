@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class BodyComponent implements OnInit{
+  public input: HTMLInputElement | undefined;
+
   ngOnInit(): void {
     this.date();
+
+    const input = document.getElementById('input__task') as HTMLInputElement;
+    this.input = input;
   }
 
   public date () {
@@ -18,11 +23,28 @@ export class BodyComponent implements OnInit{
     return date
   }
 
-  public reset(event: any): void {
-    document.getElementById('btn__refresh')?.addEventListener('click', () => {
-      event.value = '';
-      event.focus();
+  public reset(): void {
+    this.input!.value = '';
+    this.input!.focus();
+  }
 
+  public createTask(data: any): void {
+    document.getElementById('btn__input')?.addEventListener('click', () => {
+      console.log(data)
+      const taskInput = this.input!.value;
+
+      if (taskInput) {
+        const taskList = document.getElementById('list__task');
+        const fragment = document.createDocumentFragment();
+
+        data[2].textContent = taskInput;
+        console.log(data[2])
+
+        fragment.appendChild(data[0]);
+        taskList!.appendChild(fragment);
+
+        this.reset();
+      }
     })
   }
 }

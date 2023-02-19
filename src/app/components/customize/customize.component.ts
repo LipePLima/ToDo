@@ -1,7 +1,6 @@
 import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { ApiColors, ApiImages } from '../../services/api';
-import { observable } from 'rxjs';
 
 @Component({
   selector: 'app-customize',
@@ -66,22 +65,22 @@ export class CustomizeComponent implements OnInit {
 
   private changeColors (btn: any) {
     const body         = document.body as HTMLElement;
-    const header       = document.querySelector('.container__header') as HTMLElement;
-    const dateBody     = document.getElementById('dateBody') as HTMLElement;
     const falseCheck   = document.getElementById('demo__checkBox') as HTMLElement;
-    const arrowDone    = document.getElementById('arrowDone') as HTMLElement;
-    const arrowRefresh = document.getElementById('arrowRefresh') as HTMLElement;
-    const btnCompleted = document.getElementById('btn__completed') as HTMLElement;
-    const textTheme    = document.getElementById('title__theme') as HTMLElement;
     const btnCheck     = document.querySelectorAll('.check-task');
     const btnTheme     = document.querySelectorAll('.btn__option');
+    const elements = [
+      document.querySelector('.container__header') as HTMLElement,
+      document.getElementById('dateBody') as HTMLElement,
+      document.getElementById('arrowDone') as HTMLElement,
+      document.getElementById('arrowRefresh') as HTMLElement,
+      document.getElementById('btn__completed') as HTMLElement,
+      document.getElementById('title__theme') as HTMLElement
+    ];
 
     const updateColorsText = (colorText: string) => {
       const styleProps = {
         color: colorText,
       };
-
-      const elements = [header, dateBody, arrowDone, arrowRefresh, btnCompleted, textTheme];
 
       for (const element of elements) {
         Object.assign(element.style, styleProps);
