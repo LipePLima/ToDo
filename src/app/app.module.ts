@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { ListComponent } from './components/list/list.component';
 import { CustomizeComponent } from './components/customize/customize.component';
+import { NewTaskComponent } from './components/new-task/new-task.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CustomizeComponent } from './components/customize/customize.component';
     BodyComponent,
     ListComponent,
     CustomizeComponent,
-    DateFormatPipe
+    DateFormatPipe,
+    NewTaskComponent,
   ],
   imports: [
     BrowserModule,
