@@ -60,6 +60,10 @@
     - [x] Trocar o plano de fundo da aplicação com as opções de troca de cor;
     - [ ] Trocar o plano de fundo da aplicação com as opções de troca de imagem;
     - [ ] Inserir Tarefa ao clicar no botão Confirmar;
+
+  - Testes:
+    
+    - [ ] inserir tarefas entre componentes;
     
 ## Tecnologias
 
