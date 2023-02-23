@@ -2,8 +2,8 @@
 
 *Projeto responsivo*
 
-- [Etapas](#etapas);
 - [Descrição](#descrição);
+- [Etapas](#etapas);
 - [Tecnologias](#tecnologias);
 - [Imagens](#imagens);
 - [Contatos](#contatos);
