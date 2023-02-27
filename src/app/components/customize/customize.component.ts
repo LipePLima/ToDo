@@ -1,7 +1,6 @@
 import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { ApiColors, ApiImages } from '../../services/api';
-import { observable } from 'rxjs';
 
 @Component({
   selector: 'app-customize',
