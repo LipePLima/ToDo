@@ -15,7 +15,7 @@ export class CustomizeComponent implements OnInit {
   public selectTheme: string = 'cor';
   public colors: ApiColors[] = [];
   public images: ApiImages[] = [];
-  private btns!: NodeListOf<Element>;
+  private btns!: NodeListOf<HTMLElement>;
 
   ngOnInit(): void {
     this.service.color().subscribe((colors: ApiColors[]) => {
@@ -24,15 +24,13 @@ export class CustomizeComponent implements OnInit {
     this.service.images().subscribe((images: ApiImages[]) => {
       this.images = images;
     });
-
-    console.log(this.images)
   }
 
   public displayTheme() {
     const section   = document.getElementById('container__theme') as HTMLElement;
     const arrow     = document.getElementById('arrow__theme') as HTMLElement;
     const secTheme  = document.getElementById('themes') as HTMLElement;
-    const btnOption = document.querySelectorAll('.btn__theme') as NodeListOf<Element>;
+    const btnOption = document.querySelectorAll('.btn__theme') as NodeListOf<HTMLElement>;
 
     this.btns = btnOption;
 
@@ -41,9 +39,6 @@ export class CustomizeComponent implements OnInit {
     secTheme!.classList.toggle('themes-active');
 
     btnOption[0].classList.add('btn__theme-selected');
-    for (let i = 0; i < btnOption.length; i++) {
-      this.changeColors(btnOption[i] as HTMLElement);
-    }
   }
 
   public changeOptions (event: any) {
@@ -59,7 +54,7 @@ export class CustomizeComponent implements OnInit {
 
   }
 
-  private changeColors (btn: any) {
+  public changeColors (btn: any) {
     const body       = document.body as HTMLElement;
     const falseCheck = document.getElementById('demo__checkBox') as HTMLElement;
     const btnCheck   = document.querySelectorAll('.check-task');
@@ -105,6 +100,9 @@ export class CustomizeComponent implements OnInit {
 
         for (const [prop, value] of Object.entries(styleProps)) {
           btn.style.setProperty(prop, value);
+          for (let i = 0; i < this.btns.length; i++) {
+            this.btns[i].style.setProperty(prop, value);
+          }
         }
 
         updateColorsText(colorText);
