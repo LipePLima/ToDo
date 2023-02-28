@@ -12,8 +12,9 @@ export class CustomizeComponent implements OnInit {
 
   constructor(private service: ApiService) { }
 
+  public selectTheme: string = 'cor';
   public colors: ApiColors[] = [];
-  private images: ApiImages[] = [];
+  public images: ApiImages[] = [];
   private btns!: NodeListOf<Element>;
 
   ngOnInit(): void {
@@ -23,6 +24,8 @@ export class CustomizeComponent implements OnInit {
     this.service.images().subscribe((images: ApiImages[]) => {
       this.images = images;
     });
+
+    console.log(this.images)
   }
 
   public displayTheme() {
@@ -47,27 +50,20 @@ export class CustomizeComponent implements OnInit {
     const btnOption = event.currentTarget as HTMLElement;
 
     if (!btnOption.classList.contains('btn__theme-selected')) {
-      this.btns.forEach(btn => {
+      this.btns.forEach( btn => {
         btn.classList.remove('btn__theme-selected');
-        this.changeColors(btn);
       });
 
       btnOption.classList.add('btn__theme-selected');
     }
 
-    if (btnOption == this.btns[0]) {
-      console.log('Cores');
-    } else {
-      console.log('Imagens');
-    }
-
   }
 
   private changeColors (btn: any) {
-    const body         = document.body as HTMLElement;
-    const falseCheck   = document.getElementById('demo__checkBox') as HTMLElement;
-    const btnCheck     = document.querySelectorAll('.check-task');
-    const btnTheme     = document.querySelectorAll('.btn__option');
+    const body       = document.body as HTMLElement;
+    const falseCheck = document.getElementById('demo__checkBox') as HTMLElement;
+    const btnCheck   = document.querySelectorAll('.check-task');
+    const btnTheme   = document.querySelectorAll('.btn__option');
     const elements = [
       document.querySelector('.container__header') as HTMLElement,
       document.getElementById('dateBody') as HTMLElement,
@@ -92,7 +88,6 @@ export class CustomizeComponent implements OnInit {
       const { color, colorText, borderForOpt } = this.colors[i];
 
       Object.assign(newBtn.style, {
-        backgroundColor: color,
         border: `1px solid ${borderForOpt}`
       });
 
@@ -116,5 +111,10 @@ export class CustomizeComponent implements OnInit {
         falseCheck.style.border  = `1px solid ${colorText}`;
       });
     }
+  }
+
+
+  private changeImage () {
+
   }
 }

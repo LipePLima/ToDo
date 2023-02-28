@@ -7,17 +7,27 @@
     <p class="text__themes">Selecionar tema</p>
     <ul class="list__themes">
       <li class="type__theme">
-        <button class="btn__theme" id="btn__theme" (click)="changeOptions($event)">Cor</button>
+        <button class="btn__theme" id="btn__theme" (click)="changeOptions($event)"
+        (click)="selectTheme='cor'">Cor</button>
       </li>
       <li class="type__theme">
-        <button class="btn__theme" id="btn__theme" (click)="changeOptions($event)">Imagem</button>
+        <button class="btn__theme" id="btn__theme" (click)="changeOptions($event)"
+        (click)="selectTheme='imagem'">Imagem</button>
       </li>
     </ul>
 
     <ul class="options__theme">
-      <li class="option__theme" *ngFor="let color of colors">
-        <button class="btn__option"></button>
-      </li>
+      <ng-template [ngIf]="selectTheme==='cor'">
+        <li class="option__theme" *ngFor="let color of colors">
+          <button class="btn__option" [style.background-color]="color.color"></button>
+        </li>
+      </ng-template>
+
+      <ng-template [ngIf]="selectTheme==='imagem'">
+        <li class="option__theme" *ngFor="let image of images">
+          <button class="btn__option"><img class="img__option" [src]="image.url" alt="Imagem de tema"></button>
+        </li>
+      </ng-template>
     </ul>
   </section>
 </section>

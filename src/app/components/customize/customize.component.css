@@ -87,3 +87,8 @@
   border-radius: 50%;
   margin: 1rem 1rem 0 0;
 }
+
+.img__option {
+  width: 100%;
+  height: 100%;
+}
