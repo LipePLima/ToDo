@@ -55,11 +55,12 @@ export class CustomizeComponent implements OnInit {
   }
 
   public changeColors (btn: any) {
+    const btnParam   = btn.currentTarget as HTMLElement;
     const body       = document.body as HTMLElement;
     const falseCheck = document.getElementById('demo__checkBox') as HTMLElement;
-    const btnCheck   = document.querySelectorAll('.check-task');
-    const btnTheme   = document.querySelectorAll('.btn__option');
-    const elements = [
+    const btnCheck   = document.querySelectorAll('.check-task') as NodeListOf<HTMLElement>;
+    const btnTheme   = document.querySelectorAll('.btn__option') as NodeListOf<HTMLElement>;
+    const elements   = [
       document.querySelector('.container__header') as HTMLElement,
       document.getElementById('dateBody') as HTMLElement,
       document.getElementById('arrowDone') as HTMLElement,
@@ -67,6 +68,8 @@ export class CustomizeComponent implements OnInit {
       document.getElementById('btn__completed') as HTMLElement,
       document.getElementById('title__theme') as HTMLElement
     ];
+
+    console.log(btnParam)
 
     const updateColorsText = (colorText: string) => {
       const styleProps = {
@@ -79,14 +82,9 @@ export class CustomizeComponent implements OnInit {
     }
 
     for(let i = 0; i < btnTheme.length; i++) {
-      const newBtn = btnTheme[i] as HTMLElement;
       const { color, colorText, borderForOpt } = this.colors[i];
 
-      Object.assign(newBtn.style, {
-        border: `1px solid ${borderForOpt}`
-      });
-
-      newBtn.addEventListener('click', () => {
+      btnTheme[i].addEventListener('click', () => {
         Object.assign(body.style, {
           backgroundColor: color,
           color: borderForOpt
@@ -99,7 +97,7 @@ export class CustomizeComponent implements OnInit {
         };
 
         for (const [prop, value] of Object.entries(styleProps)) {
-          btn.style.setProperty(prop, value);
+          btnParam.style.setProperty(prop, value);
           for (let i = 0; i < this.btns.length; i++) {
             this.btns[i].style.setProperty(prop, value);
           }
