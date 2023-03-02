@@ -47,6 +47,9 @@ table {
 body {
   background-color: #6078BF;
   color: #6078BF;
+  background-size: 145% 130%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 :root {

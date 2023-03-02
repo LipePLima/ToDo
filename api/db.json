@@ -38,13 +38,25 @@
   ],
   "images": [
     {
-      "url": "../../../assets/flower.svg"
+      "url": "none"
     },
     {
-      "url": "../../../assets/table.svg"
+      "url": "url('../../../assets/img/flower.svg')"
     },
     {
-      "url": "../../../assets/wood.svg"
+      "url": "url('../../../assets/img/table.svg')"
+    },
+    {
+      "url": "url('../../../assets/img/wood.svg')"
+    },
+    {
+      "url": "url('../../../assets/img/bridge.svg')"
+    },
+    {
+      "url": "url('../../../assets/img/beach.svg')"
+    },
+    {
+      "url": "url('../../../assets/img/mountain.svg')"
     }
   ]
 }

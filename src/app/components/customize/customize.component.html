@@ -24,7 +24,7 @@
 
       <ng-template [ngIf]="selectTheme==='imagem'">
         <li class="option__theme" *ngFor="let image of images">
-          <button class="btn__option-images" (click)="changeImage($event)" [style]="{'background-image': 'url(' + image.url + ')'}"
+          <button class="btn__option-images" (click)="changeImage($event)" [style]="{'background-image': image.url}"
           ></button>
         </li>
       </ng-template>
