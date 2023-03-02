@@ -107,8 +107,14 @@ export class CustomizeComponent implements OnInit {
     }
   }
 
-
   public changeImage (btn: any) {
+    const body      = document.body as HTMLElement;
+    const btnImages = btn.target as HTMLElement;
 
+    body.style.backgroundImage = btnImages.style.backgroundImage;
+
+    // Object.assign(body.style, {
+    //   background
+    // })
   }
 }
