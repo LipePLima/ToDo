@@ -87,3 +87,15 @@
   border-radius: 50%;
   margin: 1rem 1rem 0 0;
 }
+
+.btn__option-images {
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  margin: 1rem 1rem 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+

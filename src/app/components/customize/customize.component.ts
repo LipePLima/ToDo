@@ -12,9 +12,10 @@ export class CustomizeComponent implements OnInit {
 
   constructor(private service: ApiService) { }
 
+  public selectTheme: string = 'cor';
   public colors: ApiColors[] = [];
-  private images: ApiImages[] = [];
-  private btns!: NodeListOf<Element>;
+  public images: ApiImages[] = [];
+  private btns!: NodeListOf<HTMLElement>;
 
   ngOnInit(): void {
     this.service.color().subscribe((colors: ApiColors[]) => {
@@ -29,7 +30,7 @@ export class CustomizeComponent implements OnInit {
     const section   = document.getElementById('container__theme') as HTMLElement;
     const arrow     = document.getElementById('arrow__theme') as HTMLElement;
     const secTheme  = document.getElementById('themes') as HTMLElement;
-    const btnOption = document.querySelectorAll('.btn__theme') as NodeListOf<Element>;
+    const btnOption = document.querySelectorAll('.btn__theme') as NodeListOf<HTMLElement>;
 
     this.btns = btnOption;
 
@@ -38,49 +39,40 @@ export class CustomizeComponent implements OnInit {
     secTheme!.classList.toggle('themes-active');
 
     btnOption[0].classList.add('btn__theme-selected');
-    for (let i = 0; i < btnOption.length; i++) {
-      this.changeColors(btnOption[i] as HTMLElement);
-    }
   }
 
   public changeOptions (event: any) {
     const btnOption = event.currentTarget as HTMLElement;
 
     if (!btnOption.classList.contains('btn__theme-selected')) {
-      this.btns.forEach(btn => {
+      this.btns.forEach( btn => {
         btn.classList.remove('btn__theme-selected');
-        this.changeColors(btn);
       });
 
       btnOption.classList.add('btn__theme-selected');
     }
 
-    if (btnOption == this.btns[0]) {
-      console.log('Cores');
-    } else {
-      console.log('Imagens');
-    }
-
   }
 
-  private changeColors (btn: any) {
-    const body         = document.body as HTMLElement;
-    const header       = document.querySelector('.container__header') as HTMLElement;
-    const dateBody     = document.getElementById('dateBody') as HTMLElement;
-    const falseCheck   = document.getElementById('demo__checkBox') as HTMLElement;
-    const arrowDone    = document.getElementById('arrowDone') as HTMLElement;
-    const arrowRefresh = document.getElementById('arrowRefresh') as HTMLElement;
-    const btnCompleted = document.getElementById('btn__completed') as HTMLElement;
-    const textTheme    = document.getElementById('title__theme') as HTMLElement;
-    const btnCheck     = document.querySelectorAll('.check-task');
-    const btnTheme     = document.querySelectorAll('.btn__option');
+  public changeColors (btn: any) {
+    const btnParam   = btn.currentTarget as HTMLElement;
+    const body       = document.body as HTMLElement;
+    const falseCheck = document.getElementById('demo__checkBox') as HTMLElement;
+    const btnCheck   = document.querySelectorAll('.check-task') as NodeListOf<HTMLElement>;
+    const btnTheme   = document.querySelectorAll('.btn__option') as NodeListOf<HTMLElement>;
+    const elements   = [
+      document.querySelector('.container__header') as HTMLElement,
+      document.getElementById('dateBody') as HTMLElement,
+      document.getElementById('arrowDone') as HTMLElement,
+      document.getElementById('arrowRefresh') as HTMLElement,
+      document.getElementById('btn__completed') as HTMLElement,
+      document.getElementById('title__theme') as HTMLElement
+    ];
 
     const updateColorsText = (colorText: string) => {
       const styleProps = {
         color: colorText,
       };
-
-      const elements = [header, dateBody, arrowDone, arrowRefresh, btnCompleted, textTheme];
 
       for (const element of elements) {
         Object.assign(element.style, styleProps);
@@ -88,15 +80,9 @@ export class CustomizeComponent implements OnInit {
     }
 
     for(let i = 0; i < btnTheme.length; i++) {
-      const newBtn = btnTheme[i] as HTMLElement;
       const { color, colorText, borderForOpt } = this.colors[i];
 
-      Object.assign(newBtn.style, {
-        backgroundColor: color,
-        border: `1px solid ${borderForOpt}`
-      });
-
-      newBtn.addEventListener('click', () => {
+      btnTheme[i].addEventListener('click', () => {
         Object.assign(body.style, {
           backgroundColor: color,
           color: borderForOpt
@@ -109,12 +95,20 @@ export class CustomizeComponent implements OnInit {
         };
 
         for (const [prop, value] of Object.entries(styleProps)) {
-          btn.style.setProperty(prop, value);
+          btnParam.style.setProperty(prop, value);
+          for (let i = 0; i < this.btns.length; i++) {
+            this.btns[i].style.setProperty(prop, value);
+          }
         }
 
         updateColorsText(colorText);
         falseCheck.style.border  = `1px solid ${colorText}`;
       });
     }
+  }
+
+
+  public changeImage (btn: any) {
+
   }
 }

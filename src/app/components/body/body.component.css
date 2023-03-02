@@ -17,7 +17,7 @@ main {
 }
 
 .demo__checkBox {
-  width: 7%;
+  width: 25px;
   height: 25px;
   border: var(--border-white);
   border-radius: 50%;

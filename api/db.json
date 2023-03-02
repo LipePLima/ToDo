@@ -38,7 +38,13 @@
   ],
   "images": [
     {
-      "url": ""
+      "url": "../../../assets/flower.svg"
+    },
+    {
+      "url": "../../../assets/table.svg"
+    },
+    {
+      "url": "../../../assets/wood.svg"
     }
   ]
 }

@@ -2,14 +2,14 @@
   <p class="date" id="dateBody">{{ date() | dateFormat }}</p>
   <section class="container__input">
     <div class="demo__checkBox" id="demo__checkBox"></div>
-    <input type="text" maxlength="33" id="input__task" class="input__task" (click)="reset($event.target)">
+    <input type="text" maxlength="33" id="input__task" class="input__task">
     <button class="btn__input btn__confirm" id="btn__input">
       <span class="material-symbols-outlined" id="arrowDone">done</span>
     </button>
-    <button class="btn__input btn__refresh" id="btn__refresh">
+    <button class="btn__input btn__refresh" id="btn__refresh" (click)="reset()">
       <span class="material-symbols-outlined" id="arrowRefresh">refresh</span>
     </button>
   </section>
-  <app-list></app-list>
+  <app-list [value]="input!.value" (func)="createTask($event)"></app-list>
   <app-customize></app-customize>
 </main>
