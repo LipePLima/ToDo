@@ -69,8 +69,6 @@ export class CustomizeComponent implements OnInit {
       document.getElementById('title__theme') as HTMLElement
     ];
 
-    console.log(btnParam)
-
     const updateColorsText = (colorText: string) => {
       const styleProps = {
         color: colorText,
@@ -110,7 +108,7 @@ export class CustomizeComponent implements OnInit {
   }
 
 
-  private changeImage () {
+  public changeImage (btn: any) {
 
   }
 }
