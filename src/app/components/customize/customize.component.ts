@@ -38,7 +38,10 @@ export class CustomizeComponent implements OnInit {
     arrow.classList.toggle('arrow__theme-active');
     secTheme!.classList.toggle('themes-active');
 
-    btnOption[0].classList.add('btn__theme-selected');
+    if (this.selectTheme == 'cor') {
+      btnOption[0].classList.add('btn__theme-selected');
+
+    }
   }
 
   public changeOptions (event: any) {
@@ -56,17 +59,17 @@ export class CustomizeComponent implements OnInit {
 
   public changeColors (btn: any) {
     const btnParam   = btn.currentTarget as HTMLElement;
-    const body       = document.body as HTMLElement;
+    const body       = document.body     as HTMLElement;
     const falseCheck = document.getElementById('demo__checkBox') as HTMLElement;
-    const btnCheck   = document.querySelectorAll('.check-task') as NodeListOf<HTMLElement>;
+    const btnCheck   = document.querySelectorAll('.check-task')  as NodeListOf<HTMLElement>;
     const btnTheme   = document.querySelectorAll('.btn__option') as NodeListOf<HTMLElement>;
     const elements   = [
-      document.querySelector('.container__header') as HTMLElement,
-      document.getElementById('dateBody') as HTMLElement,
-      document.getElementById('arrowDone') as HTMLElement,
-      document.getElementById('arrowRefresh') as HTMLElement,
-      document.getElementById('btn__completed') as HTMLElement,
-      document.getElementById('title__theme') as HTMLElement
+      document.getElementById('container__header') as HTMLElement,
+      document.getElementById('dateBody')          as HTMLElement,
+      document.getElementById('arrowDone')         as HTMLElement,
+      document.getElementById('arrowRefresh')      as HTMLElement,
+      document.getElementById('btn__completed')    as HTMLElement,
+      document.getElementById('title__theme')      as HTMLElement
     ];
 
     const updateColorsText = (colorText: string) => {
@@ -98,6 +101,7 @@ export class CustomizeComponent implements OnInit {
           btnParam.style.setProperty(prop, value);
           for (let i = 0; i < this.btns.length; i++) {
             this.btns[i].style.setProperty(prop, value);
+            btnCheck[i].style.setProperty(prop, value)
           }
         }
 
@@ -112,9 +116,5 @@ export class CustomizeComponent implements OnInit {
     const btnImages = btn.target as HTMLElement;
 
     body.style.backgroundImage = btnImages.style.backgroundImage;
-
-    // Object.assign(body.style, {
-    //   background
-    // })
   }
 }

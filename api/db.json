@@ -34,6 +34,11 @@
       "color": "#E1EFFA",
       "colorText": "#2D64A7",
       "borderForOpt": "#2D64A7"
+    },
+    {
+      "color": "#95FF74",
+      "colorText": "#000",
+      "borderForOpt": "#000"
     }
   ],
   "images": [

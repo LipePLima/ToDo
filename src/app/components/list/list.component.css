@@ -50,7 +50,7 @@
 }
 
 .check-active {
-  background-color: #6078BF;
+  background-color: var(--backColor-active);
   border: none;
 }
 
