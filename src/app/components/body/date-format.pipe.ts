@@ -10,7 +10,7 @@ export class DateFormatPipe implements PipeTransform {
       'Quarta-Feira',
       'Quinta-Feira',
       'Sexta-Feira',
-      'Sábado'
+      'Sábado',
     ];
     const months: string[] = [
       'Janeiro',
@@ -24,9 +24,11 @@ export class DateFormatPipe implements PipeTransform {
       'Setembro',
       'Outubro',
       'Novembro',
-      'Dezembro'
+      'Dezembro',
     ];
 
-    return `${days[date.getDay()]}, ${date.getDate()} de ${months[date.getMonth()]}`;
+    return `${days[date.getDay()]}, ${date.getDate()} de ${
+      months[date.getMonth()]
+    }`;
   }
 }

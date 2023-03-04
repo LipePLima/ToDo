@@ -1,7 +1,8 @@
 @keyframes top {
   0% {
     top: 95%;
-  } 100% {
+  }
+  100% {
     top: calc(95% - 136px);
   }
 }
@@ -9,12 +10,11 @@
 .container__theme {
   position: absolute;
   top: 95%;
-
 }
 
 .container__theme-active {
   top: calc(95% - 130px);
-  animation: top .5s linear;
+  animation: top 0.5s linear;
 }
 
 .title__theme {
@@ -28,12 +28,12 @@
 }
 
 .arrow__theme {
-  transition: .2s;
+  transition: 0.2s;
   transform: rotate(-90deg);
 }
 
 .arrow__theme-active {
-  transition: .2s;
+  transition: 0.2s;
   transform: rotate(0deg);
 }
 
@@ -59,7 +59,8 @@
   margin-bottom: 1rem;
 }
 
-.list__themes, .options__theme {
+.list__themes,
+.options__theme {
   display: flex;
 }
 
@@ -71,8 +72,8 @@
   text-align: center;
   color: var(--backColor-active);
   background-color: transparent;
-  padding: .2rem .6rem;
-  margin-right: .5rem;
+  padding: 0.2rem 0.6rem;
+  margin-right: 0.5rem;
 }
 
 .btn__theme-selected {
@@ -98,4 +99,3 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-

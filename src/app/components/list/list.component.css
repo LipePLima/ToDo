@@ -16,8 +16,8 @@
   align-items: center;
   width: 90%;
   height: 40px;
-  margin-bottom: .5rem;
-  padding: 0 .5rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
   border-radius: 8px;
   background-color: var(--white);
   font-family: var(--font-body);
@@ -38,7 +38,7 @@
   align-items: center;
   width: 24px;
   height: 24px;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   background-color: var(--white);
   border: var(--border-black);
   border-radius: 50%;
@@ -88,7 +88,7 @@
   color: var(--white);
   font-size: 18px;
   font-weight: 500;
-  margin: 1rem 0 1rem .5rem;
+  margin: 1rem 0 1rem 0.5rem;
   padding: 0;
 }
 
@@ -97,13 +97,13 @@
 }
 
 .arrow__completed {
-  transition: .2s;
+  transition: 0.2s;
   font-size: 24px;
   transform: rotate(90deg);
 }
 
 .arrow__completed-active {
-  transition: .2s;
+  transition: 0.2s;
   transform: rotate(0deg);
 }
 

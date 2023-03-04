@@ -1,6 +1,5 @@
 <section class="container__list">
   <ul class="list__task" id="list__task">
-  
     <li class="task">
       <div class="info-task">
         <button class="check-task" (click)="finishTask($event)">
@@ -24,11 +23,13 @@
         <span class="material-symbols-outlined remove">delete_forever</span>
       </button>
     </li>
-
   </ul>
 
   <button class="btn__completed" id="btn__completed" (click)="viewCompleteds()">
-    <span class="material-symbols-outlined arrow__completed" id="arrow__completed">
+    <span
+      class="material-symbols-outlined arrow__completed"
+      id="arrow__completed"
+    >
       chevron_right
     </span>
     <p class="completed" id="completed">Concluídas</p>
