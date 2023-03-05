@@ -11,6 +11,8 @@
 
 ## Descrição 
 
+Aplicativo de registro de tarefas baseado no app To Do da Microsoft. Com funcionalidades de personalização de temas e cores. Além de ter data e hora embutidos no aplicativo
+
 ![Status: em desenvolvimento](https://img.shields.io/badge/STATUS-Em%20desenvolvimento-blue)
 
 ## Etapas
