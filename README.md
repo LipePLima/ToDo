@@ -1,7 +1,5 @@
 # ToDo - Organize seu dia
 
-*Projeto responsivo*
-
 - [Descrição](#descrição);
 - [Etapas](#etapas);
 - [Tecnologias](#tecnologias);
