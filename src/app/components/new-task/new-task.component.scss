@@ -1,0 +1,70 @@
+@import url('../list/list.component.scss');
+
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 8px;
+  background-color: var(--white);
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 500;
+
+  .info-task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+  }
+
+  .check-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    background-color: var(--white);
+    border: var(--border-black);
+    border-radius: 50%;
+  }
+
+  .check {
+    font-size: 22px;
+    color: var(--white);
+  }
+
+  .check-active {
+    background-color: var(--backColor-active);
+    border: none;
+  }
+
+  .text-task {
+    font-size: 18px;
+  }
+
+  .text-active {
+    color: #8b8b8b;
+    text-decoration: line-through;
+  }
+
+  .remove-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .remove {
+    font-size: 28px;
+  }
+}

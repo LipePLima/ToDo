@@ -1,0 +1,50 @@
+.container__list {
+  margin-top: 2rem;
+
+  .list__task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .new-task {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .btn__completed {
+    font-family: var(--font-body);
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 1rem 0 1rem 0.5rem;
+    padding: 0;
+
+    .arrow__completed {
+      transition: 0.2s;
+      font-size: 24px;
+      transform: rotate(90deg);
+    }
+
+    .arrow__completed-active {
+      transition: 0.2s;
+      transform: rotate(0deg);
+    }
+  }
+
+  .btn__completed-active {
+    display: flex;
+  }
+
+  .list__completed-active {
+    display: none;
+  }
+}
