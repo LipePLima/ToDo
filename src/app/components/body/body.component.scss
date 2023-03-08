@@ -1,0 +1,52 @@
+main {
+  height: 90vh;
+
+  .date {
+    font-family: var(--font-date);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white1);
+  }
+
+  .container__input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+
+    .demo__checkBox {
+      width: 25px;
+      height: 25px;
+      border: var(--border-white);
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+
+    .input__task {
+      font-size: 18px;
+      width: 70%;
+      height: 36px;
+      border: var(--border-white);
+      border-radius: 5px;
+      padding-left: 0.4rem;
+    }
+
+    .btn__input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10%;
+      height: 32px;
+      margin-left: 0.5rem;
+      background-color: #c4c4c4;
+      color: var(--white);
+      border: var(--border-white);
+      border-radius: 2px;
+    }
+
+    .btn__input:active {
+      background-color: #686868;
+    }
+  }
+}
+
