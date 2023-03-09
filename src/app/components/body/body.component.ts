@@ -1,50 +1,49 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild
+} from '@angular/core';
 
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.scss'],
 })
-
-export class BodyComponent implements OnInit{
-  public input: HTMLInputElement | undefined;
-
+export class BodyComponent implements OnInit {
   ngOnInit(): void {
     this.date();
-
-    const input = document.getElementById('input__task') as HTMLInputElement;
-    this.input = input;
   }
 
-  public date () {
-    let now: number = Date.now()
-    let date: Date  = new Date(now);
+  public date() {
+    let now: number = Date.now();
+    let date: Date = new Date(now);
 
-    return date
+    return date;
+  }
+
+  taskGenerated: { task: string }[] = [];
+  inputValue = '';
+
+  @ViewChild('elementSelect')
+  inputSelected!: ElementRef;
+
+  public createTask(): void {
+    const input = this.inputSelected.nativeElement;
+    this.inputValue = input.value;
+
+    if (this.inputValue === '') {
+      input.style.border = '1px solid red';
+
+    } else {
+      input.style.border = 'none';
+
+      this.taskGenerated.push({ task: this.inputValue });
+    }
   }
 
   public reset(): void {
-    this.input!.value = '';
-    this.input!.focus();
-  }
-
-  public createTask(data: any): void {
-    document.getElementById('btn__input')?.addEventListener('click', () => {
-      console.log(data)
-      const taskInput = this.input!.value;
-
-      if (taskInput) {
-        const taskList = document.getElementById('list__task');
-        const fragment = document.createDocumentFragment();
-
-        data[2].textContent = taskInput;
-        console.log(data[2])
-
-        fragment.appendChild(data[0]);
-        taskList!.appendChild(fragment);
-
-        this.reset();
-      }
-    })
+    this.inputSelected.nativeElement!.value = '';
+    this.inputSelected.nativeElement!.focus();
   }
 }

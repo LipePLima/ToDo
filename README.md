@@ -60,11 +60,13 @@ OBS: Por hora será somente em mobile, mas pretendo torná-lo responsivo!
     - [x] Alterar as opções de Cor e Imagens da opção Temas;
     - [x] Trocar o plano de fundo da aplicação com as opções de troca de cor;
     - [x] Trocar o plano de fundo da aplicação com as opções de troca de imagem;
-    - [ ] Inserir Tarefa ao clicar no botão Confirmar;
+    - [x] Inserir Tarefa ao clicar no botão Confirmar;
+    - [ ] Estilizar tarefa inclusa;
+    - [ ] Corrigir bug de tarefa concluida não estilizada;
 
   - Testes:
     
-    - [ ] inserir tarefas entre componentes;
+    - [x] inserir tarefas entre componentes;
     
 ## Tecnologias
 

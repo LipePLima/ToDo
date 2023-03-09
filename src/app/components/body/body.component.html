@@ -1,15 +1,17 @@
 <main class="compBody">
   <p class="date" id="dateBody">{{ date() | dateFormat }}</p>
+
   <section class="container__input">
     <div class="demo__checkBox" id="demo__checkBox"></div>
-    <input type="text" maxlength="33" id="input__task" class="input__task" />
-    <button class="btn__input btn__confirm" id="btn__input">
+    <input type="text" maxlength="33" name="input__task" id="input__task" class="input__task" #elementSelect/>
+    <button class="btn__input btn__confirm" id="btn__input" (click)="createTask()">
       <span class="material-symbols-outlined" id="arrowDone">done</span>
     </button>
     <button class="btn__input btn__refresh" id="btn__refresh" (click)="reset()">
       <span class="material-symbols-outlined" id="arrowRefresh">refresh</span>
     </button>
   </section>
-  <app-list [value]="input!.value" (func)="createTask($event)"></app-list>
+
+  <app-list [tasks]="taskGenerated"></app-list>
   <app-customize></app-customize>
 </main>
