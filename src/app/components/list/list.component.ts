@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 
 export class ListComponent {
   @Input() value: string | undefined;
-  @Input() tasks: { task: string }[] = [];
+  @Input() taskList: { task: string }[] = [];
 
   public viewCompleteds() {
     const arrow:         HTMLElement | null = document.getElementById('arrow__completed');

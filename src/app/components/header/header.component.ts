@@ -22,5 +22,4 @@ export class HeaderComponent implements OnInit {
       this.Hours = `${hours}:${minutes}`;
     }, 1000);
   }
-
 }

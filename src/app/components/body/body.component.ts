@@ -39,7 +39,7 @@ export class BodyComponent implements OnInit {
       input.style.border = 'none';
 
       this.taskGenerated.push({ task: this.inputValue });
-      input.value = ''
+      this.reset();
     }
   }
 

@@ -6,13 +6,14 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./new-task.component.scss']
 })
 export class NewTaskComponent {
+  @Input() taskList: { task: string }[] = [];
   @Input() task: string = '';
 
   public finishTask(event: any) {
     const listToDo      = document.getElementById('list__task')      as HTMLElement;
     const listCompleted = document.getElementById('list__completed') as HTMLElement;
     const btn           = document.getElementById('btn__completed')  as HTMLElement;
-    const check         = event.target.parentNode;
+    const check         = event.currentTarget;
     const task          = check.parentNode.querySelector('.text-task');
 
     check?.classList.toggle('check-active');
@@ -33,5 +34,18 @@ export class NewTaskComponent {
       btn!.classList.remove('btn__completed-active');
 
     }
+  }
+
+  public removeTask(event: any) {
+    const btnRemove = event.currentTarget;
+    const taskInfo  = btnRemove.parentNode.querySelector('.text-task');
+
+    this.taskList.forEach( el => {
+      if (taskInfo.textContent == el.task) {
+        const position = this.taskList.indexOf(el)
+        this.taskList.splice(position, 1)
+        
+      }
+    })
   }
 }

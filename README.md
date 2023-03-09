@@ -40,6 +40,9 @@ OBS: Por hora será somente em mobile, mas pretendo torná-lo responsivo!
      - [x] Botão de exibição de lista de tarefas concluídas;
      - [x] Lista de tarefas concluidas;
      - [x] Opções de personalização de background;
+     - [x] Estilizar tarefa inclusa;
+     - [x] Corrigir bug de tarefa concluida não estilizada;
+    
 
 *Funcionalidades*
 
@@ -61,12 +64,13 @@ OBS: Por hora será somente em mobile, mas pretendo torná-lo responsivo!
     - [x] Trocar o plano de fundo da aplicação com as opções de troca de cor;
     - [x] Trocar o plano de fundo da aplicação com as opções de troca de imagem;
     - [x] Inserir Tarefa ao clicar no botão Confirmar;
-    - [x] Estilizar tarefa inclusa;
-    - [x] Corrigir bug de tarefa concluida não estilizada;
-
+    - [x] Excluir tarefa quando clicar no botão excluir;
+    
   - Testes:
     
     - [x] inserir tarefas entre componentes;
+
+  
     
 ## Tecnologias
 

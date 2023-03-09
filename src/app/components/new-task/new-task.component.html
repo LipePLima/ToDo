@@ -5,7 +5,7 @@
     </button>
     <p class="text-task">{{ task }}</p>
   </div>
-  <button class="remove-task">
+  <button class="remove-task" (click)="removeTask($event)">
     <span class="material-symbols-outlined remove">delete_forever</span>
   </button>
 </li>
