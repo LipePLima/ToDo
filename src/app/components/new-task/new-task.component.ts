@@ -17,11 +17,11 @@ export class NewTaskComponent {
     const task          = check.parentNode.querySelector('.text-task');
 
     check?.classList.toggle('check-active');
-    task?.classList.toggle('text-active')
+    task?.classList.toggle('text-active');
 
     btn!.classList.add('btn__completed-active');
 
-    let row = check.parentNode.parentNode;
+    let row = check.parentNode.parentNode.parentNode;
     if (check.classList.contains('check-active')) {
       listCompleted!.appendChild(row)
 
@@ -30,7 +30,7 @@ export class NewTaskComponent {
 
     }
 
-    if (listCompleted?.childElementCount == 0) {
+    if (listCompleted?.childElementCount === 0) {
       btn!.classList.remove('btn__completed-active');
 
     }
@@ -44,7 +44,8 @@ export class NewTaskComponent {
       if (taskInfo.textContent == el.task) {
         const position = this.taskList.indexOf(el)
         this.taskList.splice(position, 1)
-        
+
+        console.log(this.taskList)
       }
     })
   }
