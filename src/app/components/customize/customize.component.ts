@@ -70,7 +70,7 @@ export class CustomizeComponent implements OnInit {
       document.getElementById('arrowRefresh')      as HTMLElement,
       document.getElementById('btn__completed')    as HTMLElement,
       document.getElementById('title__theme')      as HTMLElement
-    ];
+    ] as HTMLElement[];
 
     const updateColorsText = (colorText: string) => {
       const styleProps = {
@@ -101,7 +101,6 @@ export class CustomizeComponent implements OnInit {
           btnParam.style.setProperty(prop, value);
           for (let i = 0; i < this.btns.length; i++) {
             this.btns[i].style.setProperty(prop, value);
-            btnCheck[i].style.setProperty(prop, value)
           }
         }
 
