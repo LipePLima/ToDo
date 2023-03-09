@@ -1,8 +1,11 @@
 <section class="container__list">
   <ul class="list__task" id="list__task">
-    <li class="task" *ngFor="let task of tasks">
-      <app-new-task [task]='task.task' class="new-task"></app-new-task>
-    </li>
+    <app-new-task
+      [task]="task.task"
+      class="new-task"
+      *ngFor="let task of tasks"
+    >
+    </app-new-task>
   </ul>
 
   <button class="btn__completed" id="btn__completed" (click)="viewCompleteds()">
@@ -16,7 +19,6 @@
   </button>
 
   <ul class="list__task list__completed" id="list__completed">
-    <li class="task task-finish">
-    </li>
+    <li class="task task-finish"></li>
   </ul>
 </section>

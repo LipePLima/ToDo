@@ -9,9 +9,9 @@ export class NewTaskComponent {
   @Input() task: string = '';
 
   public finishTask(event: any) {
-    const listToDo      = document.querySelector('.list__task')
-    const listCompleted = document.getElementById('list__completed');
-    const btn           = document.getElementById('btn__completed');
+    const listToDo      = document.getElementById('list__task')      as HTMLElement;
+    const listCompleted = document.getElementById('list__completed') as HTMLElement;
+    const btn           = document.getElementById('btn__completed')  as HTMLElement;
     const check         = event.target.parentNode;
     const task          = check.parentNode.querySelector('.text-task');
 
