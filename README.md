@@ -12,8 +12,6 @@
 Aplicativo de registro de tarefas baseado no app To Do da Microsoft. Com funcionalidades de personalização de temas e cores. Além de ter data e hora embutidos no aplicativo.
 OBS: Por hora será somente em mobile, mas pretendo torná-lo responsivo!
 
-![Status: em desenvolvimento](https://img.shields.io/badge/STATUS-Em%20desenvolvimento-blue)
-
 ## Etapas
 
 **Mobile First**
@@ -81,7 +79,10 @@ OBS: Por hora será somente em mobile, mas pretendo torná-lo responsivo!
 
 ## Imagens
 
-![Status: em desenvolvimento](https://img.shields.io/badge/STATUS-Em%20desenvolvimento-blue)
+<h3> :camera: Layout Único MOBILE</h3>
+
+![Imagem com fundo foto](https://user-images.githubusercontent.com/102830741/224446833-857a03b6-bbe4-431a-98f4-9a61aecc2da2.png)
+![Imagem com fundo cor](https://user-images.githubusercontent.com/102830741/224446382-55afd16d-f5fe-4a95-9a4a-ca62a8016053.png)
 
 ## Depoimento 
 
