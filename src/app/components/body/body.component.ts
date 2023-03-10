@@ -1,9 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild
-} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -11,8 +6,20 @@ import {
   styleUrls: ['./body.component.scss'],
 })
 export class BodyComponent implements OnInit {
+  taskGenerated: { task: string }[] = [];
+  inputValue = '';
+
   ngOnInit(): void {
     this.date();
+
+    if (!localStorage['taskList']) {
+      localStorage.setItem('taskList', JSON.stringify(this.taskGenerated));
+    }
+
+    const taskList = localStorage.getItem("taskList");
+    if (typeof taskList === 'string') {
+      this.taskGenerated = JSON.parse(taskList);
+    }
   }
 
   public date() {
@@ -21,9 +28,6 @@ export class BodyComponent implements OnInit {
 
     return date;
   }
-
-  taskGenerated: { task: string }[] = [];
-  inputValue = '';
 
   @ViewChild('elementSelect')
   inputSelected!: ElementRef;
@@ -34,11 +38,12 @@ export class BodyComponent implements OnInit {
 
     if (this.inputValue === '') {
       input.style.border = '1px solid red';
-
     } else {
       input.style.border = 'none';
 
       this.taskGenerated.push({ task: this.inputValue });
+
+      localStorage.setItem('taskList', JSON.stringify(this.taskGenerated));
       this.reset();
     }
   }

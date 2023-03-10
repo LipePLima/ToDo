@@ -42,6 +42,10 @@ OBS: Por hora será somente em mobile, mas pretendo torná-lo responsivo!
      - [x] Opções de personalização de background;
      - [x] Estilizar tarefa inclusa;
      - [x] Corrigir bug de tarefa concluida não estilizada;
+
+  - Armazenamento de dados;
+     - [x] Tasks armazenadas no LocalStorage;
+     - [ ] Arquivo JSON de personalização(cores/imagens) em um banco de dados; 
     
 
 *Funcionalidades*

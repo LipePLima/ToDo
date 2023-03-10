@@ -1,10 +1,11 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-new-task',
   templateUrl: './new-task.component.html',
-  styleUrls: ['./new-task.component.scss']
+  styleUrls: ['./new-task.component.scss'],
 })
+
 export class NewTaskComponent {
   @Input() taskList: { task: string }[] = [];
   @Input() task: string = '';
@@ -23,10 +24,10 @@ export class NewTaskComponent {
 
     let row = check.parentNode.parentNode.parentNode;
     if (check.classList.contains('check-active')) {
-      listCompleted!.appendChild(row)
+      listCompleted!.appendChild(row);
 
     } else {
-      listToDo!.appendChild(row)
+      listToDo!.appendChild(row);
 
     }
 
@@ -38,15 +39,16 @@ export class NewTaskComponent {
 
   public removeTask(event: any) {
     const btnRemove = event.currentTarget;
-    const taskInfo  = btnRemove.parentNode.querySelector('.text-task');
+    const taskInfo = btnRemove.parentNode.querySelector('.text-task');
 
-    this.taskList.forEach( el => {
+    this.taskList.forEach((el) => {
       if (taskInfo.textContent == el.task) {
-        const position = this.taskList.indexOf(el)
-        this.taskList.splice(position, 1)
+        const position = this.taskList.indexOf(el);
 
-        console.log(this.taskList)
+        this.taskList.splice(position, 1);
+
+        localStorage.setItem('taskList', JSON.stringify(this.taskList));
       }
-    })
+    });
   }
 }
