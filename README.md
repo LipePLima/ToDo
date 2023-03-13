@@ -86,7 +86,10 @@ OBS: Por hora será somente em mobile, mas pretendo torná-lo responsivo!
 
 ## Depoimento 
 
-![Status: em desenvolvimento](https://img.shields.io/badge/STATUS-Em%20desenvolvimento-blue)
+Finalmente posso deixar aqui meu depoimento deste projeto. Foi bem complicado, quando acho que passei por um projeto difícil, arrumou outro pior hahaha Mas sempre devemos nos desafiar mais e mais. Por conta no nascimento do meu sobrinho, atrasei o projeto em 2 semanas e pude estar entregando somente agora. Este foi o primeiro projeto onde utilizei o chatGPT para me auxiliar nas minhas dúvidas, sem sombras de dúvidas continuarei utilizando. Graças a ele pude aprender além do que eu imaginava e pude otimizar bastante o projeto.
+Neste projeto pude criar api para a personalização, aprender mais sobre services e Events Bindings. Além de utilizar pela primeira vez a linguagem de pré-processamento SCSS e o decorador Input para transferência da lista de tarefas entre os componentes! Eu curti bastante, por mais que tenha sido bem complicado e ter atrasado 2 semanas. Estou grato pelo que aprendi com este projeto e espero que você curta também!!
+
+OBS: Em breve a API estará no ar para personalização!
 
 ## Contatos
 
