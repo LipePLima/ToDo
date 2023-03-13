@@ -8,8 +8,8 @@ import { ApiColors, ApiImages } from './api';
 })
 export class ApiService {
 
-  private readonly apiColors = 'http://localhost:3000/colors';
-  private readonly apiImages = 'http://localhost:3000/images';
+  private readonly apiColors = 'https://todo-api-fen7.onrender.com/colors';
+  private readonly apiImages = 'https://todo-api-fen7.onrender.com/images';
 
   constructor(private http: HttpClient) { }
 

@@ -69,7 +69,7 @@ OBS: Por hora será somente em mobile, mas pretendo torná-lo responsivo!
 
   - Armazenamento de dados;
      - [x] Tasks armazenadas no LocalStorage;
-     - [ ] Arquivo JSON de personalização(cores/imagens) em um banco de dados; 
+     - [x] Arquivo JSON de personalização(cores/imagens) em um banco de dados; 
 
   
     
