@@ -3,8 +3,9 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.scss'],
+  styleUrls: ['./body.component.scss', './bodyMQ.component.scss'],
 })
+
 export class BodyComponent implements OnInit {
   taskGenerated: { task: string }[] = [];
   inputValue = '';

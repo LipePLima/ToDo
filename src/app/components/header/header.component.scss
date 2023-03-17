@@ -11,6 +11,14 @@
     font-weight: bold;
   }
 
+  .date {
+
+    font-family: var(--font-date);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white1);
+  }
+
   .hour {
     font-family: var(--font-date);
     font-size: 28px;

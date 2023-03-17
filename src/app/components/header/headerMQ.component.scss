@@ -1,0 +1,24 @@
+@media screen and (min-width: 480px){
+  .container__header {
+    .date {
+      display: initial;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .container__header {
+    $font-title: 32px;
+    .title {
+      font-size: $font-title;
+    }
+
+    .date {
+      font-size: 22px;
+    }
+
+    .hour {
+      font-size: $font-title;
+    }
+  }
+}
