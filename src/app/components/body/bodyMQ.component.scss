@@ -1,5 +1,46 @@
-@media screen and (min-width: 480px){
-  .date {
-    display: none;
+@media screen and (min-width: 480px) {
+  main {
+    .date {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 540px) {
+  main {
+    .container__input {
+      .content__input {
+        width: 496px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 930px) {
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .container__main {
+      width: 860px;
+      background: #ffffff10;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 2px solid #ffffff30;
+
+      .container__input {
+        padding-top: 1.5rem;
+
+        .content__input {
+          width: 720px;
+        }
+
+        .btn__input {
+          width: 50px;
+          height: 38px;
+        }
+      }
+    }
   }
 }
