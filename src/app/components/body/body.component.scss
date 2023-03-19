@@ -1,5 +1,5 @@
 main {
-  min-height: calc(100vh - 58px);
+  min-height: calc(100vh - 3.625rem);
 
   .date {
     font-family: var(--font-date);
@@ -9,7 +9,7 @@ main {
   }
 
   .container__main {
-    margin-top: 32px;
+    margin-top: 2rem;
 
     .container__input {
       display: flex;
@@ -23,8 +23,8 @@ main {
       }
 
       .demo__checkBox {
-        width: 25px;
-        height: 25px;
+        width: 1.563rem;
+        height: 1.563rem;
         border: var(--border-white);
         border-radius: 50%;
         margin-right: 0.5rem;
@@ -33,7 +33,7 @@ main {
       .input__task {
         font-size: 18px;
         width: 70%;
-        height: 36px;
+        height: 2.25rem;
         border: var(--border-white);
         border-radius: 5px;
         padding-left: 0.4rem;
@@ -44,7 +44,7 @@ main {
         justify-content: center;
         align-items: center;
         width: 10%;
-        height: 32px;
+        height: 2rem;
         margin-left: 0.5rem;
         background-color: #c4c4c4;
         color: var(--white);
@@ -58,9 +58,9 @@ main {
     }
   }
 
-  .container {
-    position: absolute;
+  .container__footer {
+    position: relative;
     width: 100%;
-    bottom: 0;
+    bottom: -29.7rem;
   }
 }
