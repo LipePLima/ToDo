@@ -35,8 +35,6 @@
   .themes {
     display: none;
     position: inherit;
-
-    height: 7.5rem;
     background-color: var(--white);
     border-radius: 18px 18px 0 0;
     padding: 1rem 1rem 0.5rem 1rem;
@@ -74,11 +72,13 @@
     }
 
     .option__theme {
+      margin-bottom: 1rem;
+      
       .btn__option {
         width: 1.625rem;
         height: 1.625rem;
         border-radius: 50%;
-        margin: 1rem .8rem 0 0;
+        margin: 1rem .7rem 0 0;
       }
 
       .btn__option-images {

@@ -5,7 +5,7 @@ import { ApiColors, ApiImages } from '../../services/api';
 @Component({
   selector: 'app-customize',
   templateUrl: './customize.component.html',
-  styleUrls: ['./customize.component.scss']
+  styleUrls: ['./customize.component.scss', './customizeMQ.component.scss']
 })
 
 export class CustomizeComponent implements OnInit {
