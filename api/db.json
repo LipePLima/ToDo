@@ -46,13 +46,16 @@
       "url": "none"
     },
     {
+      "url": "url('../../../assets/img/truck.jpg')"
+    },
+    {
+      "url": "url('../../../assets/img/city.jpg')"
+    },
+    {
+      "url": "url('../../../assets/img/londres.jpg')"
+    },
+    {
       "url": "url('../../../assets/img/flower.svg')"
-    },
-    {
-      "url": "url('../../../assets/img/table.svg')"
-    },
-    {
-      "url": "url('../../../assets/img/wood.svg')"
     },
     {
       "url": "url('../../../assets/img/bridge.svg')"
