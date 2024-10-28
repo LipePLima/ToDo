@@ -9,10 +9,12 @@
 
 ## Descrição | Description
 
-PT-BR: Aplicativo de registro de tarefas baseado no app To Do da Microsoft. Com funcionalidades de personalização de temas e cores. Além de ter data e hora embutidos no aplicativo.
+PT-BR: 
+Aplicativo de registro de tarefas baseado no app To Do da Microsoft. Com funcionalidades de personalização de temas e cores. Além de ter data e hora embutidos no aplicativo.
 OBS: Por hora será somente em mobile, mas pretendo torná-lo responsivo!
 
-EN-US: A task logging app inspired by Microsoft To Do, featuring theme and color customization options. It also includes date and time functionality embedded in the app. Note: For now, it will only be available on mobile, but I plan to make it responsive!
+EN-US: 
+A task logging app inspired by Microsoft To Do, featuring theme and color customization options. It also includes date and time functionality embedded in the app. Note: For now, it will only be available on mobile, but I plan to make it responsive!
 
 ## Etapas | Steps
 
@@ -88,11 +90,11 @@ EN-US: A task logging app inspired by Microsoft To Do, featuring theme and color
 
 ## Depoimento | Testimonial
 
-PT-BR: Finalmente posso deixar aqui meu depoimento deste projeto. Foi bem complicado, quando acho que passei por um projeto difícil, arrumou outro pior hahaha Mas sempre devemos nos desafiar mais e mais. Por conta no nascimento do meu sobrinho, atrasei o projeto em 2 semanas e pude estar entregando somente agora. Este foi o primeiro projeto onde utilizei o chatGPT para me auxiliar nas minhas dúvidas, sem sombras de dúvidas continuarei utilizando. Graças a ele pude aprender além do que eu imaginava e pude otimizar bastante o projeto.
+PT-BR: 
+Finalmente posso deixar aqui meu depoimento deste projeto. Foi bem complicado, quando acho que passei por um projeto difícil, arrumou outro pior hahaha Mas sempre devemos nos desafiar mais e mais. Por conta no nascimento do meu sobrinho, atrasei o projeto em 2 semanas e pude estar entregando somente agora. Este foi o primeiro projeto onde utilizei o chatGPT para me auxiliar nas minhas dúvidas, sem sombras de dúvidas continuarei utilizando. Graças a ele pude aprender além do que eu imaginava e pude otimizar bastante o projeto.
 Neste projeto pude criar api para a personalização, aprender mais sobre services e Events Bindings. Além de utilizar pela primeira vez a linguagem de pré-processamento SCSS e o decorador Input para transferência da lista de tarefas entre os componentes! Eu curti bastante, por mais que tenha sido bem complicado e ter atrasado 2 semanas. Estou grato pelo que aprendi com este projeto e espero que você curta também!!
 
-EN-US: **My Testimonial**
-
+EN-US: 
 Finally, I can share my thoughts on this project! It was quite a challenge; every time I think I've tackled something tough, along comes an even bigger one, haha. But we should always push ourselves further. Due to my nephew's birth, I ended up delaying the project by two weeks, so I'm only able to deliver it now. This was the first project where I used ChatGPT for support with my questions, and I’ll definitely keep using it. Thanks to it, I was able to learn far more than I anticipated and greatly optimized the project.
 
 In this project, I created an API for customization, learned more about services and event bindings, and also used SCSS preprocessing and the Input decorator for transferring the task list between components for the first time! It was a rewarding experience, even though it was quite complicated and I had that two-week delay. I'm grateful for everything I learned from this project, and I hope you enjoy it too!
